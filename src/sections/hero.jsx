@@ -371,7 +371,7 @@ const Hero = () => {
                 background: 'linear-gradient(to right, #fff, #f8f6ff)',
             }}
         >
-            <Grid container spacing={8} alignItems="center">
+            <Grid container spacing={8} alignItems="center" justifyContent="center">
                 <Grid item xs={12} md={4}>
                     <Box>
                         <Stack spacing={2}>
