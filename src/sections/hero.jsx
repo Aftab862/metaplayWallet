@@ -371,8 +371,7 @@ const Hero = () => {
                 background: 'linear-gradient(to right, #fff, #f8f6ff)',
             }}
         >
-            <Grid container spacing={4} alignItems="center">
-                {/* Left Section */}
+            <Grid container spacing={8} alignItems="center">
                 <Grid item xs={12} md={4}>
                     <Box>
                         <Stack spacing={2}>
@@ -444,8 +443,7 @@ const Hero = () => {
                     </Box>
                 </Grid>
 
-                {/* Center Section (Phone mockup) */}
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={4} zIndex={1}>
                     <Box sx={{ position: 'relative', width: '355px', mx: 'auto' }}>
                         <Box
                             component="img"
@@ -473,9 +471,8 @@ const Hero = () => {
                     </Box>
                 </Grid>
 
-                {/* Right Section */}
-                <Grid item xs={12} md={4}>
-                    <Stack spacing={2} alignItems="flex-start">
+                <Grid item xs={12} md={4} zIndex={1}>
+                    <Stack spacing={2} className=' items-center md:items-start'>
                         <Typography
                             sx={{
                                 fontSize: { xs: '32px', md: '40px' },
@@ -490,7 +487,7 @@ const Hero = () => {
                             Download App
                         </Typography>
 
-                        <Stack direction="row" spacing={2}>
+                        <Stack direction="column" spacing={2}>
                             <Box component="img" src={playStore} alt="Play Store" sx={{ width: '154px' }} />
                             <Box component="img" src={appStore} alt="App Store" sx={{ width: '154px' }} />
                         </Stack>
@@ -499,34 +496,21 @@ const Hero = () => {
                 </Grid>
             </Grid>
 
-            {/* Scroll Down (Vertical Text) */}
             <Typography
                 sx={{
+                    zIndex: 1,
                     position: 'absolute',
-                    right: { xs: 10, md: 24 },
-                    bottom: { xs: 16, md: 40 },
+                    right: "12%",
+                    bottom: "30%",
                     writingMode: 'vertical-rl',
                     transform: 'rotate(180deg)',
                     fontSize: '14px',
                     color: '#000',
+                    display: { sm: "none", md: "block" },
                 }}
             >
                 Scroll Down
             </Typography>
-
-            {/* <Box
-                component="img"
-                src={subtract}
-                alt="Phone Frame"
-                sx={{
-                    width: '355px',
-                    height: '698px',
-                    position: "absolute",
-                    top: "12%",
-                    right: "12%",
-
-                }}
-            /> */}
 
 
             {/* <Typography
@@ -540,13 +524,29 @@ const Hero = () => {
                     fontFamily: 'Poppins, Helvetica',
                     fontWeight: 600,
                     color: 'transparent',
-                    fontSize: '500px',
+                    fontSize: '600px',
                     textAlign: 'center',
                     lineHeight: 'normal',
                 }}
             >
                 meta
             </Typography> */}
+
+            <Box
+                component="img"
+                src={subtract}
+                alt="Wallet Icon"
+                sx={{
+                    position: "absolute",
+                    display: { sm: "none", md: "block" },
+                    width: '450px',
+                    mx: 1,
+                    right: "10%",
+                    bottom: "25%",
+                    p: 1,
+                    zIndex: 0
+                }}
+            />
         </Box>
     );
 };
