@@ -40,7 +40,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full bg-transparent py-6 px-4 md:px-8">
+        <nav className="w-full bg-white shadow-sm  py-6 px-4 md:px-8">
             <div className="max-w-screen-xl mx-auto flex items-center justify-between relative">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
