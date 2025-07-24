@@ -9,17 +9,7 @@ import Footer from "./sections/footer";
 
 const App = () => {
   return (
-    <div
-    // className="bg-[#ecf1fe] flex flex-row justify-center w-full"
-    // data-model-id="1:2047"
-    >
-      {/* <div className="bg-[#ecf1fe] overflow-hidden w-[1440px] h-[4988px]"> */}
-      {/* <div className="relative w-[1441px] h-[4988px]">
-          <img
-            className="absolute w-[1440px] h-[3027px] top-[257px] left-0"
-            alt="Bg blur"
-            src={BlurBg}
-          /> */}
+    <div>
 
       <Frame />
       {/* <OverlapWrapper /> */}
@@ -27,8 +17,7 @@ const App = () => {
       <FrameWrapper />
       <DivWrapper />
       <Footer />
-      {/* </div> */}
-      {/* </div> */}
+
     </div>
   );
 };
