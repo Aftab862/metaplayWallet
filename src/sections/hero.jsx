@@ -111,235 +111,447 @@
 // export default Hero;
 
 
+// import React from 'react';
+// import { Box, Typography } from '@mui/material';
+// import subtract from '../assets/subtract.svg';
+// import subtract1 from '../assets/subtract-1.png';
+// import mobile1 from '../assets/7@2x.png';
+// import mobile2 from '../assets/15-plus-5.png';
+// import mobileFrame from '../assets/mobileframe.png';
+// import wallet from '../assets/wallet.png';
+// import appStore from '../assets/appstore.svg';
+// import playStore from '../assets/playstore.svg';
+
+// const Hero = () => {
+//     return (
+//         <Box sx={{ position: 'absolute', width: '100%', overflow: 'hidden' }}>
+//             <Box
+//                 sx={{
+//                     position: 'relative',
+//                     width: '100%',
+//                     maxWidth: '1912px',
+//                     height: '1237px',
+//                     top: '-254px',
+//                     left: '-237px',
+//                     mx: 'auto',
+//                 }}
+//             >
+//                 <Typography
+//                     sx={{
+//                         position: 'absolute',
+//                         height: '1050px',
+//                         top: 0,
+//                         left: 0,
+//                         WebkitTextStroke: '1px #000000',
+//                         opacity: 0.1,
+//                         fontFamily: 'Poppins, Helvetica',
+//                         fontWeight: 600,
+//                         color: 'transparent',
+//                         fontSize: '700px',
+//                         textAlign: 'center',
+//                         lineHeight: 'normal',
+//                     }}
+//                 >
+//                     meta
+//                 </Typography>
+
+//                 <Box
+//                     component="img"
+//                     src={subtract}
+//                     alt="Subtract"
+//                     sx={{ position: 'absolute', width: '660px', height: '727px', top: '440px', left: '878px' }}
+//                 />
+
+//                 <Box
+//                     component="img"
+//                     src={subtract1}
+//                     alt="Subtract1"
+//                     sx={{ position: 'absolute', width: '300px', height: '199px', top: '918px', left: '378px', objectFit: 'cover' }}
+//                 />
+
+//                 <Box
+//                     component="img"
+//                     src={mobile1}
+//                     alt="Mobile1"
+//                     sx={{ position: 'absolute', width: '197px', height: '216px', top: '908px', left: '385px', objectFit: 'cover' }}
+//                 />
+
+//                 <Box sx={{ position: 'absolute', width: '355px', height: '698px', top: '539px', left: '810px' }}>
+//                     <Box sx={{ position: 'relative', height: '698px' }}>
+//                         <Box
+//                             component="img"
+//                             src={mobile2}
+//                             alt=""
+//                             sx={{
+//                                 position: 'absolute',
+//                                 width: '302px',
+//                                 height: '654px',
+//                                 top: '22px',
+//                                 left: '27px',
+//                                 borderRadius: '32px',
+//                             }}
+//                         />
+//                         <Box
+//                             component="img"
+//                             src={mobileFrame}
+//                             alt="Iphone plus green"
+//                             sx={{ position: 'absolute', width: '355px', height: '698px', top: 0, left: 0, objectFit: 'cover' }}
+//                         />
+//                     </Box>
+//                 </Box>
+
+//                 <Typography
+//                     sx={{
+//                         position: 'absolute',
+//                         top: '445px',
+//                         left: '386px',
+//                         fontFamily: 'Poppins, Helvetica',
+//                         fontWeight: 500,
+//                         fontSize: '84px',
+//                         letterSpacing: '-7px',
+//                         lineHeight: '96px',
+//                         color: 'black',
+//                     }}
+//                 >
+//                     Meta<br />Play Wallet
+//                 </Typography>
+
+//                 <Typography
+//                     sx={{
+//                         position: 'absolute',
+//                         top: '751px',
+//                         left: '1178px',
+//                         fontFamily: 'Poppins, Helvetica',
+//                         fontWeight: 500,
+//                         fontSize: '40px',
+//                         letterSpacing: '-2px',
+//                         lineHeight: '48px',
+//                         color: 'black',
+//                     }}
+//                 >
+//                     Mobile<br />Application
+//                 </Typography>
+
+//                 <Typography
+//                     sx={{
+//                         position: 'absolute',
+//                         top: '679px',
+//                         left: '378px',
+//                         fontFamily: 'Poppins, Helvetica',
+//                         fontWeight: 400,
+//                         fontSize: '24px',
+//                         letterSpacing: '-1px',
+//                         color: 'black',
+//                     }}
+//                 >
+//                     Fast Easy Secure
+//                 </Typography>
+
+//                 <Box
+//                     sx={{
+//                         position: 'absolute',
+//                         top: '982px',
+//                         left: '1478px',
+//                         display: 'flex',
+//                         flexDirection: 'column',
+//                         alignItems: 'flex-start',
+//                         justifyContent: 'center',
+//                         gap: '16px',
+//                         cursor: 'pointer',
+//                     }}
+//                 >
+//                     <Typography
+//                         sx={{
+//                             width: '81px',
+//                             height: '24px',
+//                             transform: 'rotate(-90deg)',
+//                             fontFamily: 'Poppins, Helvetica',
+//                             fontWeight: 400,
+//                             fontSize: '14px',
+//                             color: 'black',
+//                         }}
+//                     >
+//                         Scroll Down
+//                     </Typography>
+//                 </Box>
+
+//                 <Box
+//                     sx={{
+//                         position: 'absolute',
+//                         top: '925px',
+//                         left: '611px',
+//                         height: '110px',
+//                         display: 'flex',
+//                         flexDirection: 'column',
+//                         justifyContent: 'center',
+//                         gap: '16px',
+//                         transform: 'rotate(90deg)',
+//                     }}
+//                 >
+//                     <Typography
+//                         sx={{
+//                             width: '70px',
+//                             transform: 'rotate(-90deg)',
+//                             fontFamily: 'Poppins, Helvetica',
+//                             fontWeight: 400,
+//                             fontSize: '14px',
+//                             color: 'black',
+//                         }}
+//                     >
+//                         See Video
+//                     </Typography>
+//                 </Box>
+
+//                 <Typography
+//                     sx={{
+//                         position: 'absolute',
+//                         top: '903px',
+//                         left: '1178px',
+//                         fontFamily: 'Poppins, Helvetica',
+//                         fontWeight: 400,
+//                         fontSize: '16px',
+//                         color: 'black',
+//                     }}
+//                 >
+//                     Download App
+//                 </Typography>
+
+//                 <Box
+//                     component="img"
+//                     src={wallet}
+//                     alt="Wallet"
+//                     sx={{ position: 'absolute', width: '133px', height: '56px', top: '471px', left: '596px' }}
+//                 />
+
+//                 <Box
+//                     component="img"
+//                     src={appStore}
+//                     alt="App Store"
+//                     sx={{ position: 'absolute', width: '154px', height: '51px', top: '1002px', left: '1178px' }}
+//                 />
+
+//                 <Box
+//                     component="img"
+//                     src={playStore}
+//                     alt="Play Store"
+//                     sx={{ position: 'absolute', width: '154px', height: '50px', top: '942px', left: '1178px' }}
+//                 />
+//             </Box>
+//         </Box>
+//     );
+// };
+
+// export default Hero;
+
+
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Grid, Typography, Stack } from '@mui/material';
+import wallet from '../assets/wallet.png';
 import subtract from '../assets/subtract.svg';
 import subtract1 from '../assets/subtract-1.png';
-import mobile1 from '../assets/7@2x.png';
 import mobile2 from '../assets/15-plus-5.png';
 import mobileFrame from '../assets/mobileframe.png';
-import wallet from '../assets/wallet.png';
+
 import appStore from '../assets/appstore.svg';
 import playStore from '../assets/playstore.svg';
+// import seeVideo from '../assets/see-video.png'; // your bottom-left image
 
 const Hero = () => {
     return (
-        <Box sx={{ position: 'absolute', width: '100%', overflow: 'hidden' }}>
-            <Box
-                sx={{
-                    position: 'relative',
-                    width: '100%',
-                    maxWidth: '1912px',
-                    height: '1237px',
-                    top: '-254px',
-                    left: '-237px',
-                    mx: 'auto',
-                }}
-            >
-                <Typography
-                    sx={{
-                        position: 'absolute',
-                        height: '1050px',
-                        top: 0,
-                        left: 0,
-                        WebkitTextStroke: '1px #000000',
-                        opacity: 0.1,
-                        fontFamily: 'Poppins, Helvetica',
-                        fontWeight: 600,
-                        color: 'transparent',
-                        fontSize: '700px',
-                        textAlign: 'center',
-                        lineHeight: 'normal',
-                    }}
-                >
-                    meta
-                </Typography>
+        <Box
+            sx={{
+                width: '100%',
+                minHeight: '100vh',
+                px: { xs: 2, md: 8 },
+                py: { xs: 6, md: 10 },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+                background: 'linear-gradient(to right, #fff, #f8f6ff)',
+            }}
+        >
+            <Grid container spacing={4} alignItems="center">
+                {/* Left Section */}
+                <Grid item xs={12} md={4}>
+                    <Box>
+                        <Stack spacing={2}>
+                            <Box display="flex" alignItems="center" flexWrap="wrap">
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '42px', md: '64px' },
+                                        fontWeight: '600',
+                                        lineHeight: 1,
+                                    }}
+                                >
+                                    Meta&nbsp;
+                                </Typography>
+                                <Box
+                                    component="img"
+                                    src={wallet}
+                                    alt="Wallet Icon"
+                                    sx={{
+                                        width: '150px',
+                                        mx: 1,
+                                        p: 1,
+                                    }}
+                                />
+                            </Box>
+                            <Typography
+                                sx={{
+                                    fontSize: { xs: '42px', md: '64px' },
+                                    fontWeight: '600',
+                                    lineHeight: 1,
+                                }}
+                            >
+                                Play Wallet
+                            </Typography>
 
-                <Box
-                    component="img"
-                    src={subtract}
-                    alt="Subtract"
-                    sx={{ position: 'absolute', width: '660px', height: '727px', top: '440px', left: '878px' }}
-                />
+                            <Typography sx={{ fontSize: '18px', color: '#000' }}>
+                                Fast Easy Secure
+                            </Typography>
+                        </Stack>
 
-                <Box
-                    component="img"
-                    src={subtract1}
-                    alt="Subtract1"
-                    sx={{ position: 'absolute', width: '300px', height: '199px', top: '918px', left: '378px', objectFit: 'cover' }}
-                />
+                        <Box
+                            sx={{
+                                mt: 8,
+                                width: '220px',
+                                position: 'relative',
+                            }}
+                        >
+                            <Box
+                                component="img"
+                                src={subtract1}
+                                alt="See Video"
+                                sx={{
+                                    width: '100%',
+                                    borderRadius: '24px',
+                                }}
+                            />
+                            <Typography
+                                sx={{
+                                    position: 'absolute',
+                                    top: '8px',
+                                    right: '12px',
+                                    fontSize: '14px',
+                                    fontWeight: 500,
+                                    color: '#000',
+                                }}
+                            >
+                                See Video
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Grid>
 
-                <Box
-                    component="img"
-                    src={mobile1}
-                    alt="Mobile1"
-                    sx={{ position: 'absolute', width: '197px', height: '216px', top: '908px', left: '385px', objectFit: 'cover' }}
-                />
-
-                <Box sx={{ position: 'absolute', width: '355px', height: '698px', top: '539px', left: '810px' }}>
-                    <Box sx={{ position: 'relative', height: '698px' }}>
+                {/* Center Section (Phone mockup) */}
+                <Grid item xs={12} md={4}>
+                    <Box sx={{ position: 'relative', width: '355px', mx: 'auto' }}>
                         <Box
                             component="img"
                             src={mobile2}
-                            alt=""
+                            alt="App Screen"
                             sx={{
                                 position: 'absolute',
+                                top: '20px',
+                                left: '25px',
                                 width: '302px',
                                 height: '654px',
-                                top: '22px',
-                                left: '27px',
                                 borderRadius: '32px',
                             }}
                         />
                         <Box
                             component="img"
                             src={mobileFrame}
-                            alt="Iphone plus green"
-                            sx={{ position: 'absolute', width: '355px', height: '698px', top: 0, left: 0, objectFit: 'cover' }}
+                            alt="Phone Frame"
+                            sx={{
+                                width: '355px',
+                                height: '698px',
+                                zIndex: 1,
+                            }}
                         />
                     </Box>
-                </Box>
+                </Grid>
 
-                <Typography
-                    sx={{
-                        position: 'absolute',
-                        top: '445px',
-                        left: '386px',
-                        fontFamily: 'Poppins, Helvetica',
-                        fontWeight: 500,
-                        fontSize: '84px',
-                        letterSpacing: '-7px',
-                        lineHeight: '96px',
-                        color: 'black',
-                    }}
-                >
-                    Meta<br />Play Wallet
-                </Typography>
+                {/* Right Section */}
+                <Grid item xs={12} md={4}>
+                    <Stack spacing={2} alignItems="flex-start">
+                        <Typography
+                            sx={{
+                                fontSize: { xs: '32px', md: '40px' },
+                                fontWeight: 600,
+                                color: '#000',
+                            }}
+                        >
+                            Mobile<br />Application
+                        </Typography>
 
-                <Typography
-                    sx={{
-                        position: 'absolute',
-                        top: '751px',
-                        left: '1178px',
-                        fontFamily: 'Poppins, Helvetica',
-                        fontWeight: 500,
-                        fontSize: '40px',
-                        letterSpacing: '-2px',
-                        lineHeight: '48px',
-                        color: 'black',
-                    }}
-                >
-                    Mobile<br />Application
-                </Typography>
+                        <Typography sx={{ fontSize: '16px', color: '#000' }}>
+                            Download App
+                        </Typography>
 
-                <Typography
-                    sx={{
-                        position: 'absolute',
-                        top: '679px',
-                        left: '378px',
-                        fontFamily: 'Poppins, Helvetica',
-                        fontWeight: 400,
-                        fontSize: '24px',
-                        letterSpacing: '-1px',
-                        color: 'black',
-                    }}
-                >
-                    Fast Easy Secure
-                </Typography>
+                        <Stack direction="row" spacing={2}>
+                            <Box component="img" src={playStore} alt="Play Store" sx={{ width: '154px' }} />
+                            <Box component="img" src={appStore} alt="App Store" sx={{ width: '154px' }} />
+                        </Stack>
 
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: '982px',
-                        left: '1478px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'flex-start',
-                        justifyContent: 'center',
-                        gap: '16px',
-                        cursor: 'pointer',
-                    }}
-                >
-                    <Typography
-                        sx={{
-                            width: '81px',
-                            height: '24px',
-                            transform: 'rotate(-90deg)',
-                            fontFamily: 'Poppins, Helvetica',
-                            fontWeight: 400,
-                            fontSize: '14px',
-                            color: 'black',
-                        }}
-                    >
-                        Scroll Down
-                    </Typography>
-                </Box>
+                    </Stack>
+                </Grid>
+            </Grid>
 
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: '925px',
-                        left: '611px',
-                        height: '110px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        gap: '16px',
-                        transform: 'rotate(90deg)',
-                    }}
-                >
-                    <Typography
-                        sx={{
-                            width: '70px',
-                            transform: 'rotate(-90deg)',
-                            fontFamily: 'Poppins, Helvetica',
-                            fontWeight: 400,
-                            fontSize: '14px',
-                            color: 'black',
-                        }}
-                    >
-                        See Video
-                    </Typography>
-                </Box>
+            {/* Scroll Down (Vertical Text) */}
+            <Typography
+                sx={{
+                    position: 'absolute',
+                    right: { xs: 10, md: 24 },
+                    bottom: { xs: 16, md: 40 },
+                    writingMode: 'vertical-rl',
+                    transform: 'rotate(180deg)',
+                    fontSize: '14px',
+                    color: '#000',
+                }}
+            >
+                Scroll Down
+            </Typography>
 
-                <Typography
-                    sx={{
-                        position: 'absolute',
-                        top: '903px',
-                        left: '1178px',
-                        fontFamily: 'Poppins, Helvetica',
-                        fontWeight: 400,
-                        fontSize: '16px',
-                        color: 'black',
-                    }}
-                >
-                    Download App
-                </Typography>
+            {/* <Box
+                component="img"
+                src={subtract}
+                alt="Phone Frame"
+                sx={{
+                    width: '355px',
+                    height: '698px',
+                    position: "absolute",
+                    top: "12%",
+                    right: "12%",
 
-                <Box
-                    component="img"
-                    src={wallet}
-                    alt="Wallet"
-                    sx={{ position: 'absolute', width: '133px', height: '56px', top: '471px', left: '596px' }}
-                />
+                }}
+            /> */}
 
-                <Box
-                    component="img"
-                    src={appStore}
-                    alt="App Store"
-                    sx={{ position: 'absolute', width: '154px', height: '51px', top: '1002px', left: '1178px' }}
-                />
 
-                <Box
-                    component="img"
-                    src={playStore}
-                    alt="Play Store"
-                    sx={{ position: 'absolute', width: '154px', height: '50px', top: '942px', left: '1178px' }}
-                />
-            </Box>
+            {/* <Typography
+                sx={{
+                    position: 'absolute',
+                    // height: '1050px',
+                    top: "-10%",
+                    // left: 0,
+                    WebkitTextStroke: '1px #000000',
+                    opacity: 0.1,
+                    fontFamily: 'Poppins, Helvetica',
+                    fontWeight: 600,
+                    color: 'transparent',
+                    fontSize: '500px',
+                    textAlign: 'center',
+                    lineHeight: 'normal',
+                }}
+            >
+                meta
+            </Typography> */}
         </Box>
     );
 };
 
 export default Hero;
+
+
 
