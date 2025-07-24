@@ -40,7 +40,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full bg-transparent py-4 px-4 md:px-8">
+        <nav className="w-full bg-transparent py-6 px-4 md:px-8">
             <div className="max-w-screen-xl mx-auto flex items-center justify-between relative">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
@@ -55,7 +55,7 @@ const Navbar = () => {
                                 {item.label} {item.submenu && <ChevronDown className="w-4 h-4" />}
                             </Link>
                             {/* Submenu (on hover) */}
-                            <div className="absolute left-0 mt-2 my-2 hidden group-hover:block bg-white shadow-lg rounded z-50">
+                            <div className="absolute left-0  py-2 hidden group-hover:block bg-white shadow-lg rounded z-50">
                                 {item.submenu && item.submenu.map((subItem) => (
                                     <a
                                         key={subItem}
