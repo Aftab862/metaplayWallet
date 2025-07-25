@@ -8,7 +8,7 @@ import LanguageSelector from '../components/Languages';
 const navItems = [
     {
         label: "Wallet",
-        submenu: [{ name: "Mobile App", url: "" }, { name: "Browser Extension", url: "" }],
+        submenu: [{ name: "Mobile App", url: "/mobile-download" }, { name: "Browser Extension", url: "/web-download" }],
     },
     {
         label: "Features",
