@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import epay from "../assets/epay.svg";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import LanguageSelector from '../components/Languages';
+
 
 const navItems = [
     {
@@ -17,10 +19,7 @@ const navItems = [
         url: "/support"
 
     },
-    {
-        label: "Language",
-        // submenu: ["English", "Spanish", "French"],
-    },
+
     {
         label: "Download",
         url: "/download"
@@ -38,6 +37,7 @@ const Navbar = () => {
             [label]: !prev[label],
         }));
     };
+
 
     return (
         <nav className="w-full bg-white shadow-sm  py-6 px-4 md:px-8 relative z-10">
@@ -71,7 +71,7 @@ const Navbar = () => {
                     ))}
                 </div>
                 <div>
-
+                    <LanguageSelector />
                 </div>
 
                 {/* Mobile Hamburger */}
