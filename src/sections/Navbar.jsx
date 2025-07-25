@@ -14,6 +14,7 @@ const navItems = [
     },
     {
         label: "Get Support",
+        url: "/support"
         // submenu: ["FAQs", "Help Center"],
     },
     {
