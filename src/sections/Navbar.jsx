@@ -6,25 +6,24 @@ import { Link } from "react-router-dom";
 const navItems = [
     {
         label: "Wallet",
-        submenu: ["Mobile App", "Browser Extension"],
+        submenu: [{ name: "Mobile App", url: "" }, { name: "Browser Extension", url: "" }],
     },
     {
         label: "Features",
-        submenu: ["Earning", "Launchpad", "Swap"],
+        submenu: [{ name: "Earning", url: "https://vrcnetwork.app/earn" }, { name: "Launchpad", url: "" }, { name: "Swap", url: "" }],
     },
     {
         label: "Get Support",
         url: "/support"
-        // submenu: ["FAQs", "Help Center"],
+
     },
     {
         label: "Language",
-        submenu: ["English", "Spanish", "French"],
+        // submenu: ["English", "Spanish", "French"],
     },
     {
         label: "Download",
         url: "/download"
-        // submenu: ["iOS", "Android"],
     },
 ];
 
@@ -44,9 +43,9 @@ const Navbar = () => {
         <nav className="w-full bg-white shadow-sm  py-6 px-4 md:px-8">
             <div className="max-w-screen-xl mx-auto flex items-center justify-between relative">
                 {/* Logo */}
-                <div className="flex items-center gap-2">
+                <Link to="/" className="flex items-center gap-2">
                     <img src={epay} alt="Epay Logo" className="w-5 h-5 object-contain" />
-                </div>
+                </Link>
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8 text-sm md:text-base font-medium text-black">
@@ -60,10 +59,11 @@ const Navbar = () => {
                                 {item.submenu && item.submenu.map((subItem) => (
                                     <a
                                         key={subItem}
-                                        href="#"
+                                        href={subItem.url}
+
                                         className="block px-5 py-2 hover:bg-gray-100 text-sm whitespace-nowrap"
                                     >
-                                        {subItem}
+                                        {subItem.name}
                                     </a>
                                 ))}
                             </div>
