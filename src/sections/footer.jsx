@@ -1,62 +1,221 @@
+import logo from '../assets/logo.png'
+
 import React from "react";
-import { Box, Typography, Stack, Divider } from "@mui/material";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+    Box,
+    Typography,
+    Grid,
+    Button,
+    Avatar,
+    Stack,
+    Divider,
+} from "@mui/material";
+// import {
+//     Apple,
+//     Android,
+//     Github,
+//     Instagram,
+//     Facebook,
+//     Telegram,
+//     Reddit,
+//     Youtube,
+//     Chrome,
+//     Twitter,
+//     Globe
+// } from "lucide-react";
+const footerLinks = [
+    {
+        title: "Wallet",
+        links: ["Mobile App", "Browser Extension"],
+    },
+    {
+        title: "Features",
+        links: [
+            "Buy Crypto",
+            "Swaps",
+            "Staking",
+            "NFTs",
+            "Security",
+            "SWIFT: Smart Contract Wallet",
+        ],
+    },
+    {
+        title: "Build",
+        links: ["Developer Docs", "Wallet Core", "Submit dApp", "Get assets listed"],
+    },
+    {
+        title: "Support",
+        links: ["FAQ", "Contact Us"],
+    },
+    {
+        title: "About",
+        links: [
+            "About Us",
+            "Careers",
+            "Press Kit",
+            "Terms of Service",
+            "Privacy Notice",
+            "Cookie Preferences",
+            "Cookie Notice",
+            "Blog",
+        ],
+    },
+];
+
+// const socialIcons = [
+//     <FacebookIcon />,
+//     <GitHubIcon />,
+//     <InstagramIcon />,
+//     <TwitterIcon />,
+//     <RedditIcon />,
+//     <TelegramIcon />,
+//     <YouTubeIcon />,
+// ];
 
 const Footer = () => {
     return (
-        <Box className="w-full px-6 py-18">
-            {/* Top Row */}
-            <Box className="max-w-7xl mx-auto relative  flex-col md:flex items-center justify-center py-11">
-                {/* Center Links */}
-                <Stack direction="row" justifyContent="center" spacing={4}>
-                    {["Blog", "About", "Contact", "Community"].map((text) => (
-                        <Typography
-                            key={text}
-                            sx={{
-                                fontFamily: "Poppins",
-                                fontSize: "18px",
-                                cursor: "pointer",
-                            }}
-                        >
-                            {text}
+        <Box
+            sx={{
+                bgcolor: "#f5f5f7",
+                borderRadius: "24px",
+                my: 6,
+                mx: { xs: 2, md: 6 },
+                px: { xs: 3, md: 6 },
+                py: 6,
+            }}
+        >
+            <Grid container spacing={4} sx={{
+                display: "flex", justifyContent: "center", alignItems: "center"
+            }}>
+
+
+                <Grid item size={{ xs: 12, md: 3 }} sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} >
+                    <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                        <Avatar
+                            src={logo}
+                            alt="MetaPlay Wallet"
+                            sx={{ width: 80, height: 80, mb: 1, borderRadius: "0" }}
+                        />
+                        <Typography fontWeight="bold" fontSize="24px" color="#0a0a0a" mb={1}>
+                            MetaPlay Wallet
                         </Typography>
-                    ))}
-                </Stack>
+                    </Box>
+                </Grid>
+                {/* <Grid item size={{ xs: 12, md: 3 }}>
+                    <Box display="flex" flexDirection="column" alignItems="center">
 
-                {/* Social Icons (absolute right) */}
-                <Stack
-                    direction="row"
-                    spacing={2}
-                    className="absolute right-0 mt-5 md:mt-0"
+
+                        <Box mt={4}>
+                            <Typography variant="subtitle2" fontWeight="bold">
+                                Download Trust Wallet
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" mb={2}>
+                                The most trusted & secure crypto wallet.
+                            </Typography>
+
+
+                        </Box>
+                    </Box>
+                </Grid> */}
+
+                {/* Footer Columns */}
+                <Grid item size={{ xs: 12, md: 9 }}>
+                    <Grid container spacing={4}>
+                        {footerLinks.map((col) => (
+                            <Grid item size={{ xs: 12, sm: 6, md: 2.4 }} key={col.title}>
+                                <Typography fontWeight="bold" gutterBottom>
+                                    {col.title}
+                                </Typography>
+                                {col.links.map((link) => (
+                                    <Typography
+                                        key={link}
+                                        variant="body2"
+                                        color="text.secondary"
+                                        sx={{ mb: 0.5 }}
+                                    >
+                                        {link}
+                                    </Typography>
+                                ))}
+                            </Grid>
+                        ))}
+
+                        {/* Cert Badges
+                        <Grid item xs={12} sm={4} md={2}>
+                            <Box>
+                                <img
+                                    src="https://cdn-icons-png.flaticon.com/512/1201/1201642.png"
+                                    alt="ISO"
+                                    width={60}
+                                    style={{ marginBottom: "8px" }}
+                                />
+                                <img
+                                    src="https://cdn-icons-png.flaticon.com/512/1201/1201642.png"
+                                    alt="ISO"
+                                    width={60}
+                                />
+                            </Box>
+                        </Grid> */}
+                    </Grid>
+
+
+                </Grid>
+            </Grid>
+
+            {/* <Box display="flex" alignItems="center" gap={2}>
+                <Typography fontWeight="bold">Stay Connected:</Typography>
+                {socialIcons.map((icon, idx) => (
+                    <Box
+                        key={idx}
+                        sx={{
+                            bgcolor: "#000",
+                            color: "#fff",
+                            p: 1,
+                            borderRadius: "6px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
+                    >
+                        {icon}
+                    </Box>
+                ))}
+            </Box> */}
+            {/* <Stack spacing={1}>
+                <Button
+                    variant="outlined"
+                    // startIcon={<AppleIcon />}
+                    fullWidth
+                    sx={{ borderRadius: "24px", textTransform: "none" }}
                 >
-                    <Facebook style={{ cursor: "pointer" }} />
-                    <Twitter style={{ cursor: "pointer" }} />
-                    <Instagram style={{ cursor: "pointer" }} />
-                    <Linkedin style={{ cursor: "pointer" }} />
-                </Stack>
-            </Box>
+                    Download for iOS
+                </Button>
+                <Button
+                    variant="outlined"
+                    // startIcon={<ChromeIcon />}
+                    fullWidth
+                    sx={{ borderRadius: "24px", textTransform: "none" }}
+                >
+                    Download Extension
+                </Button>
+                <Button
+                    variant="outlined"
+                    // startIcon={<AndroidIcon />}
+                    fullWidth
+                    sx={{ borderRadius: "24px", textTransform: "none" }}
+                >
+                    Download APK
+                </Button>
+                <Button
+                    variant="outlined"
+                    // startIcon={<GoogleIcon />}
+                    fullWidth
+                    sx={{ borderRadius: "24px", textTransform: "none" }}
+                >
+                    Download for Android
+                </Button>
+            </Stack> */}
 
-            {/* Divider */}
-            <Divider sx={{ my: 4, bgcolor: "#ffffff33" }} />
-
-            {/* Bottom Row */}
-            <Box className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-400">
-                {/* Left */}
-                <Typography sx={{ fontFamily: "Poppins" }}>
-                    © 2023 PT. Metaplay Wallet. All rights reserved
-                </Typography>
-
-                {/* Right Links */}
-                <Stack direction="row" spacing={3}>
-                    <Typography sx={{ cursor: "pointer", fontFamily: "Poppins" }}>
-                        Privacy Policy
-                    </Typography>
-                    <Typography sx={{ cursor: "pointer", fontFamily: "Poppins" }}>
-                        Terms & Conditions
-                    </Typography>
-                </Stack>
-            </Box>
-        </Box>
+        </Box >
     );
 };
 

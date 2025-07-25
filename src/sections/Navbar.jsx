@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import epay from "../assets/epay.svg";
+import logo from "../assets/logo.png";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import LanguageSelector from '../components/Languages';
@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className="max-w-screen-xl mx-auto flex items-center justify-between relative">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
-                    <img src={epay} alt="Epay Logo" className="w-5 h-5 object-contain" />
+                    <img src={logo} alt="Epay Logo" className="w-10 h-10 object-contain" />
                 </Link>
 
                 {/* Desktop Links */}
@@ -107,7 +107,7 @@ const Navbar = () => {
                     }`}
             >
                 <div className="p-4 flex justify-between items-center border-b">
-                    <img src={epay} alt="Epay Logo" className="w-5 h-5" />
+                    <img src={logo} alt="Epay Logo" className="w-50 h-5" />
                     <button onClick={toggleMenu}>
                         <X size={24} />
                     </button>
