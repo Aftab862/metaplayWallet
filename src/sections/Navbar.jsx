@@ -10,7 +10,7 @@ const navItems = [
     },
     {
         label: "Features",
-        submenu: ["VRCN Staking and APY", "Launchpad", "Swap"],
+        submenu: ["Earning", "Launchpad", "Swap"],
     },
     {
         label: "Get Support",
