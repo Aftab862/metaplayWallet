@@ -359,6 +359,7 @@ import playStore from '../assets/playstore.svg';
 const Hero = () => {
     return (
         <Box
+            className="relative"
             sx={{
                 width: '100%',
                 minHeight: '100vh',
@@ -513,7 +514,9 @@ const Hero = () => {
             </Typography>
 
 
-            {/* <Typography
+            <Typography
+                className='hidden md:flex'
+                variant='h5'
                 sx={{
                     position: 'absolute',
                     // height: '1050px',
@@ -524,13 +527,13 @@ const Hero = () => {
                     fontFamily: 'Poppins, Helvetica',
                     fontWeight: 600,
                     color: 'transparent',
-                    fontSize: '600px',
+                    fontSize: '40vw',
                     textAlign: 'center',
                     lineHeight: 'normal',
                 }}
             >
                 meta
-            </Typography> */}
+            </Typography>
 
             <Box
                 component="img"
