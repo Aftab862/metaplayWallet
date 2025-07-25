@@ -3,6 +3,7 @@ import epay from "../assets/epay.svg";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import LanguageSelector from '../components/Languages';
+import { Box, Button } from '@mui/material';
 
 
 const navItems = [
@@ -20,10 +21,7 @@ const navItems = [
 
     },
 
-    {
-        label: "Download",
-        url: "/download"
-    },
+
 ];
 
 const Navbar = () => {
@@ -70,9 +68,30 @@ const Navbar = () => {
                         </div>
                     ))}
                 </div>
-                <div>
+                <Box display="flex" gap={2} justifyContent="center" alignItems="center">
+                    <Button
+                        variant="outlined"
+
+                        sx={{
+                            border: '1px solid',
+                            borderColor: '#1976d2',
+                            borderRadius: '30px',
+                            px: 3,
+                            py: 1,
+                            color: "#1976d2",
+                            fontWeight: 'bold',
+                            textTransform: 'none',
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                                backgroundColor: '#1976d2',
+                                color: '#fff',
+                            },
+                        }}
+                    >
+                        Download
+                    </Button>
                     <LanguageSelector />
-                </div>
+                </Box>
 
                 {/* Mobile Hamburger */}
                 <div className="md:hidden">

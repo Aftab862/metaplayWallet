@@ -17,7 +17,10 @@ export default function LanguageSelector() {
 
     return (
         <Box sx={{ position: "relative", display: "inline-block" }}>
-            <Button variant="contained" color="primary" onClick={() => setOpen(!open)} endIcon={<ChevronDown />} >
+            <Button variant="contained" sx={{
+                borderRadius: '30px', px: 3,
+                py: 1,
+            }} color="primary" onClick={() => setOpen(!open)} endIcon={<ChevronDown />} >
                 Languages
             </Button>
 

@@ -16,7 +16,6 @@ const App = () => {
       <OverlapGroupWrapper />
       <FrameWrapper />
       <DivWrapper />
-      <Footer />
 
     </div>
   );
