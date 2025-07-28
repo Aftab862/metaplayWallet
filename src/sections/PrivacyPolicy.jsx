@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
         <div className="scroll-smooth">
             <div className="flex flex-col items-center text-start text-[#202124] px-6 sm:px-8 md:px-16 py-10">
                 {/* Header Section */}
-                <div className="w-full max-w-7xl rounded-4xl bg-[#1976d2] text-white text-start py-15 px-25 mb-10">
+                <div className="w-full max-w-7xl rounded-4xl bg-[#1976d2] text-white text-start py-8 md:py-15 px-10 md:px-25 mb-10">
                     <h1 className="text-3xl sm:text-5xl font-bold mb-2">MetaPlay Wallet – Privacy Policy</h1>
                     <p className="text-sm sm:text-lg mt-4 font-light">Effective Date: 24th July, 2025</p>
                 </div>

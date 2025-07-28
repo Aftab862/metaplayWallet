@@ -60,7 +60,7 @@ const footerLinks = [
         title: "About",
         links: [
             { id: 11, name: "About Us", url: "#" },
-            { id: 12, name: "Terms of Service", url: "#" },
+            { id: 12, name: "Terms of Use", url: "/terms-of-use" },
             { id: 13, name: "Privacy Policy", url: "/privacy-policy" },
             { id: 14, name: "Cookie Preferences", url: "#" },
             { id: 15, name: "Cookie Notice", url: "#" },
@@ -113,7 +113,7 @@ const Footer = () => {
 
 
                     <Grid item size={{ xs: 12, md: 3 }} sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} >
-                        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} onClick={() => navigate("/")}>
                             <Avatar
                                 src={logo}
                                 alt="MetaPlay Wallet"

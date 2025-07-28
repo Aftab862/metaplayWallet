@@ -8,6 +8,7 @@ import Footer from './sections/footer';
 import MobileDownload from './components/MobileDownload';
 import WebDownload from './components/WebDownload';
 import PrivacyPolicyPage from './sections/PrivacyPolicy';
+import TermsOfService from './sections/TermsOfServices';
 
 const AppRoutes = () => {
     const { pathname: parms } = useLocation();
@@ -25,6 +26,8 @@ const AppRoutes = () => {
                 <Route path="/mobile-download" Component={MobileDownload} />
                 <Route path="/web-download" Component={WebDownload} />
                 <Route path="/privacy-policy" Component={PrivacyPolicyPage} />
+                <Route path="/terms-of-use" Component={TermsOfService} />
+
 
 
             </Routes>
