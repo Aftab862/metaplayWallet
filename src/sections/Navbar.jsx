@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import { keyframes } from '@emotion/react';
 import {
     Box,
@@ -68,9 +68,15 @@ const Navbar = () => {
             <nav className="w-full bg-white shadow-sm py-4 px-4 md:px-8 sticky top-0 z-50">
                 <div className="max-w-screen-xl mx-auto flex items-center justify-between relative">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-2">
+                    <button
+                        onClick={() => {
+                            window.location.href = '/';
+                        }}
+                        className="flex items-center gap-2"
+                    >
                         <img src={logo} alt="Trust Wallet Logo" className="w-40 object-contain" />
-                    </Link>
+                    </button>
+
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8 text-sm md:text-base font-medium text-black">
@@ -82,30 +88,33 @@ const Navbar = () => {
                                 onMouseLeave={() => setOpenDropdownId(null)}
                             >
                                 {item.url ? (
-                                    <Link to={item.url} className="flex items-center gap-1 cursor-pointer">
+                                    <Link to={item.url} className="flex items-center gap-1 cursor-pointer hover:text-indigo-600"
+
+                                    >
                                         {item.label}
                                     </Link>
                                 ) : (
-                                    <div className="flex items-center gap-1 cursor-pointer">
+                                    <div className="flex items-center gap-1 cursor-pointer hover:text-indigo-600">
                                         {item.label}
-                                        {item.submenu && <ChevronDown className="w-4 h-4" />}
+                                        {item.submenu && openDropdownId === item.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                                     </div>
                                 )}
 
-                                {/* Submenu Dropdown */}
+
                                 {item.submenu && openDropdownId === item.id && (
-                                    <div className="absolute left-0  py-2 bg-white shadow-lg rounded z-50 min-w-[150px]">
+                                    <div className="absolute left-1/2 transform -translate-x-1/2 py-3 bg-white shadow-xl rounded-lg z-50 min-w-[150px] border border-gray-200">
                                         {item.submenu.map((subItem) => (
                                             <a
                                                 key={subItem.id}
                                                 href={subItem.url}
-                                                className="block px-5 py-2 hover:bg-gray-100 text-sm whitespace-nowrap"
+                                                className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 text-sm transition-all duration-200 whitespace-nowrap"
                                             >
                                                 {subItem.name}
                                             </a>
                                         ))}
                                     </div>
                                 )}
+
                             </div>
                         ))}
                     </div>
