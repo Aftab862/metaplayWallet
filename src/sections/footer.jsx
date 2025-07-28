@@ -10,7 +10,7 @@ import {
     Stack,
     Divider,
 } from "@mui/material";
-import { AppleIcon, ChromeIcon, FacebookIcon, GithubIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from 'lucide-react';
+import { AppleIcon, ChromeIcon, FacebookIcon, GithubIcon, InstagramIcon, Linkedin, TwitterIcon, YoutubeIcon } from 'lucide-react';
 // import {
 //     Apple,
 //     Android,
@@ -64,6 +64,7 @@ const footerLinks = [
 ];
 
 const socialIcons = [
+    <Linkedin />,
     <FacebookIcon />,
     <GithubIcon />,
     <InstagramIcon />,
@@ -202,15 +203,15 @@ const Footer = () => {
                     </Grid>
 
                     <Grid item size={{ xs: 12, md: 5 }}>
+                        <Typography mt={4} fontWeight="bold" variant='h6'>Stay Connected:</Typography>
                         <Box
                             display="flex"
-                            alignItems="center"
+                            // alignItems="center"
                             flexWrap="wrap"
                             gap={2}
                             height="100%"
-                            mt={{ xs: 2, md: 0 }}
+                            mt={{ xs: 2, md: 2 }}
                         >
-                            <Typography fontWeight="bold">Stay Connected:</Typography>
                             {socialIcons.map((icon, idx) => (
                                 <Box
                                     key={idx}
@@ -222,6 +223,8 @@ const Footer = () => {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
+                                        width: "35px",
+                                        height: "35px"
                                     }}
                                 >
                                     {icon}
@@ -234,7 +237,7 @@ const Footer = () => {
 
 
             </Box >
-        </Box>
+        </Box >
     );
 };
 
