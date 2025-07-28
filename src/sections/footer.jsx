@@ -11,6 +11,7 @@ import {
     Divider,
 } from "@mui/material";
 import { AppleIcon, ChromeIcon, FacebookIcon, GithubIcon, InstagramIcon, Linkedin, TwitterIcon, YoutubeIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 // import {
 //     Apple,
 //     Android,
@@ -25,19 +26,23 @@ import { AppleIcon, ChromeIcon, FacebookIcon, GithubIcon, InstagramIcon, Linkedi
 //     Globe
 // } from "lucide-react";
 const footerLinks = [
+
     {
         title: "Wallet",
-        links: ["Mobile App", "Browser Extension"],
+        links: [
+            { id: 1, name: "Mobile App", url: "/mobile-download" },
+            { id: 2, name: "Browser Extension", url: "/web-download" },
+        ],
     },
     {
         title: "Features",
         links: [
-            "Buy Crypto",
-            "Swaps",
-            "Staking",
-            "NFTs",
-            "Security",
-            "SWIFT: Smart Contract Wallet",
+            { id: 3, name: "Buy Crypto", url: "#" },
+            { id: 4, name: "Swaps", url: "#" },
+            { id: 5, name: "Staking", url: "#" },
+            { id: 6, name: "NFTs", url: "#" },
+            { id: 7, name: "Security", url: "#" },
+            { id: 8, name: "SWIFT: Smart Contract Wallet", url: "#" },
         ],
     },
     // {
@@ -46,22 +51,23 @@ const footerLinks = [
     // },
     {
         title: "Support",
-        links: ["FAQ", "Contact Us"],
+        links: [
+            { id: 9, name: "FAQ", url: "#" },
+            { id: 10, name: "Contact Us", url: "#" },
+        ],
     },
     {
         title: "About",
         links: [
-            "About Us",
-            // "Careers",
-            // "Press Kit",
-            "Terms of Service",
-            "Privacy Notice",
-            "Cookie Preferences",
-            "Cookie Notice",
-            // "Blog",
+            { id: 11, name: "About Us", url: "#" },
+            { id: 12, name: "Terms of Service", url: "#" },
+            { id: 13, name: "Privacy Policy", url: "/privacy-policy" },
+            { id: 14, name: "Cookie Preferences", url: "#" },
+            { id: 15, name: "Cookie Notice", url: "#" },
         ],
     },
 ];
+
 
 const socialIcons = [
     <Linkedin />,
@@ -85,6 +91,8 @@ const apkIcon = "https://trustwallet.com/_next/image?url=%2F_next%2Fstatic%2Fmed
 
 
 const Footer = () => {
+    const navigate = useNavigate();
+
     return (
         <Box className="w-full flex justify-center ">
             {/* <Box className="flex flex-col bg-[#577DF4] w-full max-w-7xl rounded-2xl shadow-[0px_4px_184px_#a9abb533] "></Box> */}
@@ -126,12 +134,14 @@ const Footer = () => {
                                     </Typography>
                                     {col.links.map((link) => (
                                         <Typography
-                                            key={link}
+                                            key={link.id}
                                             variant="body2"
                                             color="text.secondary"
+                                            className='cursor-pointer'
                                             sx={{ mb: 0.5 }}
+                                            onClick={() => navigate(link?.url)}
                                         >
-                                            {link}
+                                            {link?.name}
                                         </Typography>
                                     ))}
                                 </Grid>

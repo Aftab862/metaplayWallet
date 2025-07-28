@@ -19,6 +19,7 @@ const App = () => {
       <MotionFadeIn delay={0.2}><OverlapGroupWrapper /></MotionFadeIn>
       <MotionFadeIn delay={0.3}><FrameWrapper /></MotionFadeIn>
       <MotionFadeIn delay={0.4}><DivWrapper /></MotionFadeIn>
+
     </div>
 
   );
