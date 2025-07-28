@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { keyframes } from '@emotion/react';
 import {
     Box,
     Button,
@@ -8,6 +9,15 @@ import {
 } from '@mui/material';
 import logo from '../assets/logo.png';
 import LanguageSelector from '../components/Languages';
+
+const pulse = keyframes`
+  0% {
+    box-shadow: 0 0 0 0 #1976d2;
+  }
+  100% {
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0);
+  }
+`;
 
 const navItems = [
     {
@@ -101,22 +111,21 @@ const Navbar = () => {
                     </div>
 
                     {/* Right Actions */}
-                    <Box display="flex" gap={2} alignItems="center">
+                    <Box className='hidden md:flex gap-4 '>
                         <Button
                             variant="contained"
                             sx={{
                                 borderRadius: '30px',
                                 px: 3,
                                 py: 1,
-                                color: "#fff",
-                                textTransform: 'none',
-                                borderColor: "#1976d2",
-                                '&:hover': {
-                                    backgroundColor: '#1976d2',
+                                backgroundColor: '#1976d2',
+                                color: '#fff',
+                                animation: `${pulse} 2s infinite 3s cubic-bezier(0.25, 0, 0, 1)`,
+                                transition: '0.5s',
+                                textTransform: "none",
 
-                                },
                             }}
-                            onClick={() => navigate("/download")}
+                            onClick={() => navigate('/download')}
                         >
                             Download
                         </Button>
