@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DivWrapper } from "./sections/DivWrapper";
-import { Frame } from "./sections/Frame";
+import Hero from "./sections/hero";
 import { FrameWrapper } from "./sections/FrameWrapper";
 import { OverlapGroupWrapper } from "./sections/OverlapGroupWrapper";
-import { OverlapWrapper } from "./sections/OverlapWrapper";
-import BlurBg from "./assets/bg-blur.png";
-import Footer from "./sections/footer";
+import MotionFadeIn from "./components/MotionFadeIn";
+
+// useEffect((
+//   Window.scrollTo(0)
+// ), [])
+
 
 const App = () => {
   return (
+
+
     <div>
-
-      <Frame />
-      {/* <OverlapWrapper /> */}
-      <OverlapGroupWrapper />
-      <FrameWrapper />
-      <DivWrapper />
-
+      <MotionFadeIn delay={0.1}><Hero /></MotionFadeIn>
+      <MotionFadeIn delay={0.2}><OverlapGroupWrapper /></MotionFadeIn>
+      <MotionFadeIn delay={0.3}><FrameWrapper /></MotionFadeIn>
+      <MotionFadeIn delay={0.4}><DivWrapper /></MotionFadeIn>
     </div>
+
   );
 };
 
 
 
 export default App;
+{/* <OverlapWrapper /> */ }
