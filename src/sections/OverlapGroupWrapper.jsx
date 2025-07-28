@@ -49,7 +49,7 @@ export const OverlapGroupWrapper = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                     variants={fadeInUp}
                 >
                     <Box className="flex flex-col md:flex-row gap-6 items-center justify-between">
@@ -105,7 +105,7 @@ export const OverlapGroupWrapper = () => {
                                 variants={fadeInUp}
                                 initial="hidden"
                                 whileInView="visible"
-                                viewport={{ once: true, amount: 0.2 }}
+                                viewport={{ once: false, amount: 0.2 }}
                                 custom={index}
                             >
                                 <Box

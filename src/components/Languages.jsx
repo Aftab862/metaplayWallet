@@ -20,7 +20,7 @@ export default function LanguageSelector() {
         setOpen(false);
     };
     return (
-        <ClickAwayListener onClickAway={() => handleClickAway}>
+        <ClickAwayListener onClickAway={handleClickAway}>
             <Box sx={{ position: "relative", display: "inline-block" }}>
                 <Button
                     variant="outlined"

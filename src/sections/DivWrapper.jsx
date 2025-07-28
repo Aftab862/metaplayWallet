@@ -111,7 +111,7 @@ export const DivWrapper = () => {
                                     variants={buttonVariant}
                                     initial="hidden"
                                     whileInView="visible"
-                                    viewport={{ once: true, amount: 0.3 }}
+                                    viewport={{ once: false, amount: 0.3 }}
                                 />
                             ))}
                         </Stack>
@@ -124,7 +124,7 @@ export const DivWrapper = () => {
                             variants={imageVariant}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.4 }}
+                            viewport={{ once: false, amount: 0.4 }}
                             style={{
                                 maxWidth: "100%",
                                 width: "100%",

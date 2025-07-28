@@ -40,10 +40,10 @@ const footerLinks = [
             "SWIFT: Smart Contract Wallet",
         ],
     },
-    {
-        title: "Build",
-        links: ["Developer Docs", "Wallet Core", "Submit dApp", "Get assets listed"],
-    },
+    // {
+    //     title: "Build",
+    //     links: ["Developer Docs", "Wallet Core", "Submit dApp", "Get assets listed"],
+    // },
     {
         title: "Support",
         links: ["FAQ", "Contact Us"],
@@ -52,13 +52,13 @@ const footerLinks = [
         title: "About",
         links: [
             "About Us",
-            "Careers",
-            "Press Kit",
+            // "Careers",
+            // "Press Kit",
             "Terms of Service",
             "Privacy Notice",
             "Cookie Preferences",
             "Cookie Notice",
-            "Blog",
+            // "Blog",
         ],
     },
 ];
@@ -120,7 +120,7 @@ const Footer = () => {
                     <Grid item size={{ xs: 12, md: 9 }}>
                         <Grid container spacing={4}>
                             {footerLinks.map((col) => (
-                                <Grid item size={{ xs: 12, sm: 6, md: 2.4 }} key={col.title}>
+                                <Grid item size={{ xs: 12, sm: 6, md: 3 }} key={col.title}>
                                     <Typography fontWeight="bold" gutterBottom>
                                         {col.title}
                                     </Typography>

@@ -84,7 +84,7 @@ const Navbar = () => {
 
                                 {/* Submenu Dropdown */}
                                 {item.submenu && openDropdownId === item.id && (
-                                    <div className="absolute left-0 mt-2 py-2 bg-white shadow-lg rounded z-50 min-w-[150px]">
+                                    <div className="absolute left-0  py-2 bg-white shadow-lg rounded z-50 min-w-[150px]">
                                         {item.submenu.map((subItem) => (
                                             <a
                                                 key={subItem.id}

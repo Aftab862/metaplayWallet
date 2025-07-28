@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const MotionFadeIn = ({ children, delay = 0.2, duration = 0.6, y = 50 }) => {
     const controls = useAnimation();
-    const [ref, inView] = useInView({ triggeronce: true, threshold: 0.1 });
+    const [ref, inView] = useInView({ triggeronce: false, threshold: 0.1 });
 
     useEffect(() => {
         if (inView) {
@@ -17,6 +17,7 @@ const MotionFadeIn = ({ children, delay = 0.2, duration = 0.6, y = 50 }) => {
     const variants = {
         hidden: { opacity: 0, y },
         visible: { opacity: 1, y: 0, transition: { delay, duration } },
+
     };
 
     return (

@@ -40,7 +40,7 @@ const Hero = () => {
                         variants={fadeInUp}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         <Box>
                             <Stack spacing={2}>
@@ -119,7 +119,7 @@ const Hero = () => {
                         variants={fadeInUp}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         <Box sx={{ position: 'relative', width: '355px', mx: 'auto' }}>
                             <Box
@@ -155,7 +155,7 @@ const Hero = () => {
                         variants={fadeInUp}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         <Stack spacing={2} className="items-center md:items-start">
                             <Typography
