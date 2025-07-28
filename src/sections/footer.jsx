@@ -94,7 +94,7 @@ const Footer = () => {
     const navigate = useNavigate();
 
     return (
-        <Box className="w-full flex justify-center ">
+        <Box className="w-full flex justify-center " id="footer">
             {/* <Box className="flex flex-col bg-[#577DF4] w-full max-w-7xl rounded-2xl shadow-[0px_4px_184px_#a9abb533] "></Box> */}
             <Box
                 className="w-full max-w-7xl"

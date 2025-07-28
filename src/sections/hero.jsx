@@ -195,20 +195,23 @@ const Hero = () => {
                     display: { sm: "none", md: "block" },
                 }}
             >
-                Scroll Down
-                <motion.div
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                    style={{
-                        position: "absolute",
-                        right: "0",
-                        top: "-35%",
+                <a href="#footer">
+                    Scroll Down
+                    <motion.div
+                        animate={{ y: [0, -5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                        style={{
+                            position: "absolute",
+                            right: "0",
+                            top: "-35%",
 
-                    }}
-                >
-                    <ArrowUp />
-                </motion.div>
+                        }}
+                    >
 
+                        <ArrowUp />
+                    </motion.div>
+
+                </a>
             </Typography>
 
             {/* Big Background Text */}
