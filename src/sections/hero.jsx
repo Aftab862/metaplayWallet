@@ -57,6 +57,7 @@ const Hero = () => {
                                     <Box
                                         component="img"
                                         src={wallet}
+                                        loading='lazy'
                                         alt="Wallet Icon"
                                         sx={{
                                             width: '150px',
@@ -90,6 +91,7 @@ const Hero = () => {
                                 <Box
                                     component="img"
                                     src={subtract1}
+                                    loading='lazy'
                                     alt="See Video"
                                     sx={{
                                         width: '100%',
@@ -124,6 +126,7 @@ const Hero = () => {
                         <Box sx={{ position: 'relative', width: '355px', mx: 'auto' }}>
                             <Box
                                 component="img"
+                                loading='lazy'
                                 src={mobile2}
                                 alt="App Screen"
                                 sx={{
@@ -137,6 +140,7 @@ const Hero = () => {
                             />
                             <Box
                                 component="img"
+                                loading='lazy'
                                 src={mobileFrame}
                                 alt="Phone Frame"
                                 sx={{
@@ -173,8 +177,8 @@ const Hero = () => {
                             </Typography>
 
                             <Stack direction="column" spacing={2}>
-                                <Box component="img" src={playStore} alt="Play Store" sx={{ width: '154px' }} />
-                                <Box component="img" src={appStore} alt="App Store" sx={{ width: '154px' }} />
+                                <Box component="img" loading='lazy' src={playStore} alt="Play Store" sx={{ width: '154px' }} />
+                                <Box component="img" loading='lazy' src={appStore} alt="App Store" sx={{ width: '154px' }} />
                             </Stack>
                         </Stack>
                     </motion.div>
@@ -239,6 +243,7 @@ const Hero = () => {
                 component="img"
                 src={subtract}
                 alt="Wallet Icon"
+                loading='lazy'
                 sx={{
                     position: "absolute",
                     display: { sm: "none", md: "block" },

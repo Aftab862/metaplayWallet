@@ -104,6 +104,7 @@ export const DivWrapper = () => {
                             {[playStore, appStore].map((store, i) => (
                                 <motion.img
                                     key={i}
+                                    loading='lazy'
                                     src={store}
                                     alt={`store-${i}`}
                                     width={174}
@@ -119,6 +120,7 @@ export const DivWrapper = () => {
 
                     <Box className="flex-1 flex justify-center items-center">
                         <motion.img
+                            loading='lazy'
                             src={groupMobile}
                             alt="Group Mobile"
                             variants={imageVariant}

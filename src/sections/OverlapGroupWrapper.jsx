@@ -87,6 +87,7 @@ export const OverlapGroupWrapper = () => {
                         <Box
                             component="img"
                             src={groupMobile}
+                            loading='lazy'
                             alt="Group Mobile"
                             sx={{
                                 maxWidth: "100%",
@@ -121,6 +122,7 @@ export const OverlapGroupWrapper = () => {
                                 >
                                     <Box
                                         component="img"
+                                        loading='lazy'
                                         src={item.image}
                                         alt={item.title}
                                         sx={{

@@ -61,6 +61,7 @@ export const FrameWrapper = () => {
                     <Box sx={{ textAlign: "center" }}>
                         <Box
                             component="img"
+                            loading='lazy'
                             src={join0}
                             alt="Left"
                             sx={{
@@ -95,6 +96,7 @@ export const FrameWrapper = () => {
                 <motion.div variants={fadeInUp} style={{ flex: 1 }}>
                     <Box sx={{ textAlign: "center" }}>
                         <Box
+                            loading='lazy'
                             component="img"
                             src={join1}
                             alt="Right"
