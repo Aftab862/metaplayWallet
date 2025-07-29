@@ -4,10 +4,13 @@ import { Download } from "lucide-react";
 import FAQSection from './Faq';
 import cryptoImages from "../assets/crypto.png"
 import Calculator from '../components/Caculator';
+import GenericButton from '../components/GenericButton';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Stacking = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <Box className="w-full flex flex-col items-center justify-center p-3 ">
@@ -51,50 +54,14 @@ const Stacking = () => {
                             >
                                 By staking your crypto, you’re not just growing your portfolio, but also helping secure blockchain networks for everyone.
                             </Typography>
-                            <Button
-                                variant="contained"
+                            <GenericButton
+                                title="Download"
+                                PY={1.5}
+                                PX={3}
+                                iconType="download"
                                 className="w-[35%]"
-                                sx={{
-                                    position: "relative",
-                                    overflow: "hidden",
-                                    borderRadius: "30px",
-                                    px: 3,
-                                    py: 1.5,
-                                    backgroundColor: "#1976d2",
-                                    color: "#fff",
-                                    textTransform: "none",
-                                    fontSize: "18px",
-                                    zIndex: 1,
-
-                                    "&::before": {
-                                        content: '""',
-                                        position: "absolute",
-                                        top: 0,
-                                        left: "-75%",
-                                        width: "50%",
-                                        height: "100%",
-                                        background:
-                                            "linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.1) 100%)",
-                                        transform: "skewX(-20deg)",
-                                        zIndex: 2,
-                                        animation: "shine 2s ease-in-out infinite",
-                                    },
-
-                                    "@keyframes shine": {
-                                        "0%": { left: "-75%" },
-                                        "100%": { left: "125%" },
-                                    },
-
-                                    "&:hover": {
-                                        backgroundColor: "#1565c0",
-                                    },
-                                }}
-                            >
-                                <Box className="flex justify-center items-center gap-2">
-                                    <Download size={20} />
-                                    <span>Download</span>
-                                </Box>
-                            </Button>
+                                btnHandler={() => navigate("/download")}
+                            />
 
 
                         </Stack>

@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import logo from '../assets/logo.png';
 import LanguageSelector from '../components/Languages';
+import GenericButton from '../components/GenericButton';
 
 const pulse = keyframes`
   0% {
@@ -39,7 +40,7 @@ const navItems = [
         id: 2,
         label: "Features",
         submenu: [
-            { id: 21, name: "staking", url: "/staking" },
+            { id: 21, name: "Staking", url: "/staking" },
             { id: 22, name: "Launchpad", url: "#" },
             { id: 23, name: "Swap", url: "#" },
         ],
@@ -128,23 +129,13 @@ const Navbar = () => {
 
                     {/* Right Actions */}
                     <Box className='hidden md:flex gap-4 '>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                borderRadius: '30px',
-                                px: 3,
-                                py: 1,
-                                backgroundColor: '#1976d2',
-                                color: '#fff',
-                                animation: `${pulse} 2s infinite 3s cubic-bezier(0.25, 0, 0, 1)`,
-                                transition: '0.5s',
-                                textTransform: "none",
+                        <GenericButton
+                            title="Download"
+                            PX={3}
+                            PY={1}
+                            btnHandler={() => navigate("/download")}
 
-                            }}
-                            onClick={() => navigate('/download')}
-                        >
-                            Download
-                        </Button>
+                        />
                         <LanguageSelector />
                     </Box>
 

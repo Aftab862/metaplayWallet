@@ -2,6 +2,8 @@ import React from 'react'
 import metaPlay from "../assets/MetaplayWallet.svg"
 import vrcn from "../assets/vrcn.png"
 import { Autocomplete, Avatar, Box, Button, FormControl, Input, InputLabel, MenuItem, Select, Stack, TextField, Typography } from '@mui/material'
+import GenericButton from './GenericButton';
+import { useNavigate } from 'react-router-dom';
 
 
 const coinOptions = [
@@ -22,6 +24,7 @@ const coinOptions = [
 
 const Calculator = () => {
     const [value, setValue] = React.useState(coinOptions[0]);
+    const navigate = useNavigate();
 
     return (
 
@@ -43,7 +46,7 @@ const Calculator = () => {
                 </Typography>
                 <Autocomplete
                     disablePortal
-                    className='relative  bg-white rounded w-90'
+                    className='relative mb-3 bg-white rounded w-90'
                     value={value}
                     // freeSolo
                     onChange={(event, newValue) => {
@@ -100,14 +103,14 @@ const Calculator = () => {
                                 right={65}
                                 color='primary'
                             >
-                                {option?.percentage === 0 ? "" : `${option?.percentage}%`}
+                                {/* {option?.percentage === 0 ? "" : `${option?.percentage}%`} */}
                             </Typography>
                         </Box>
                     )}
                 />
-                <FormControl
+                {value.id !== 2 && <FormControl
 
-                    sx={{ marginY: 3 }}
+                    className='mb-3'
                 >
                     <InputLabel id="select-age-label">Select Duration</InputLabel>
                     <Select
@@ -116,14 +119,14 @@ const Calculator = () => {
                         label="Select Duration"
                         // value={age}
                         // onChange={handleChange}
-                        className="bg-white border-0 rounded w-90"
+                        className="bg-white border-0 rounded w-90 mb-3"
 
                     >
                         <MenuItem value={3}>3 Months</MenuItem>
                         <MenuItem value={6}>6 Months</MenuItem>
                         <MenuItem value={12}>12 Months</MenuItem>
                     </Select>
-                </FormControl>
+                </FormControl>}
 
 
                 <TextField
@@ -134,10 +137,6 @@ const Calculator = () => {
                     type='number'
 
                 />
-
-
-
-
 
                 <Box className='flex justify-between mt-5  w-90'>
                     <Typography
@@ -167,23 +166,15 @@ const Calculator = () => {
                     </Typography>
                 </Box>
 
-                <Button
 
-                    loading={false}
-                    onClick={function () { }}
-                    size="lg"
-                    variant="solid"
-                    sx={{
-                        textTransform: "none",
-                        background: "#1976d2",
-                        color: "white",
-                        padding: "10px 40px ",
-                        borderRadius: "30px"
+                <GenericButton
+                    title="Earn Now"
+                    PX={5}
+                    PY={1.5}
+                    btnHandler={() => navigate("/download")}
+                />
 
-                    }}
-                >
-                    Earn Now
-                </Button>
+
             </Box>
         </Box>
 
