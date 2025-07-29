@@ -43,7 +43,7 @@ const Calculator = () => {
                 </Typography>
                 <Autocomplete
                     disablePortal
-                    className='relative mb-5 bg-white rounded w-90'
+                    className='relative  bg-white rounded w-90'
                     value={value}
                     // freeSolo
                     onChange={(event, newValue) => {
@@ -53,7 +53,7 @@ const Calculator = () => {
                     getOptionLabel={(option) => option.label}
 
                     renderInput={(params) => (
-                        <TextField {...params} label="Select" variant="outlined" />
+                        <TextField {...params} label="Select Asset" variant="outlined" />
                     )}
                     renderOption={(props, option) => (
                         <Box
@@ -105,18 +105,9 @@ const Calculator = () => {
                         </Box>
                     )}
                 />
-                <TextField
-
-                    placeholder="Enter Amount"
-                    variant="outlined"
-                    className='w-90 bg-white mb-5  border-0  rounded'
-                    type='number'
-
-                />
-                {console.log("selected values :", value?.id)}
                 <FormControl
 
-                    sx={{ marginTop: 3 }}
+                    sx={{ marginY: 3 }}
                 >
                     <InputLabel id="select-age-label">Select Duration</InputLabel>
                     <Select
@@ -135,6 +126,14 @@ const Calculator = () => {
                 </FormControl>
 
 
+                <TextField
+
+                    placeholder="Enter Amount"
+                    variant="outlined"
+                    className='w-90 bg-white mb-5  border-0  rounded'
+                    type='number'
+
+                />
 
 
 
