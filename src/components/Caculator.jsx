@@ -1,7 +1,7 @@
 import React from 'react'
 import metaPlay from "../assets/MetaplayWallet.svg"
 import vrcn from "../assets/vrcn.png"
-import { Autocomplete, Avatar, Box, Button, Input, MenuItem, Select, Stack, TextField, Typography } from '@mui/material'
+import { Autocomplete, Avatar, Box, Button, FormControl, Input, InputLabel, MenuItem, Select, Stack, TextField, Typography } from '@mui/material'
 
 
 const coinOptions = [
@@ -45,7 +45,7 @@ const Calculator = () => {
                     disablePortal
                     className='relative mb-5 bg-white rounded w-90'
                     value={value}
-                    freeSolo
+                    // freeSolo
                     onChange={(event, newValue) => {
                         setValue(newValue);
                     }}
@@ -53,7 +53,7 @@ const Calculator = () => {
                     getOptionLabel={(option) => option.label}
 
                     renderInput={(params) => (
-                        <TextField {...params} label="" variant="outlined" />
+                        <TextField {...params} label="Select" variant="outlined" />
                     )}
                     renderOption={(props, option) => (
                         <Box
@@ -97,23 +97,42 @@ const Calculator = () => {
                             <Typography
                                 variant="body1"
                                 position="absolute"
-                                right={35}
+                                right={65}
                                 color='primary'
                             >
-                                {option?.percentage}%
+                                {option?.percentage === 0 ? "" : `${option?.percentage}%`}
                             </Typography>
                         </Box>
                     )}
                 />
                 <TextField
 
-                    placeholder="Enter value"
+                    placeholder="Enter Amount"
                     variant="outlined"
-                    className='w-90 bg-white  border-0  rounded'
+                    className='w-90 bg-white mb-5  border-0  rounded'
                     type='number'
-                    mb={2}
 
                 />
+                {console.log("selected values :", value?.id)}
+                <FormControl
+
+                    sx={{ marginTop: 3 }}
+                >
+                    <InputLabel id="select-age-label">Select Duration</InputLabel>
+                    <Select
+                        labelId="select-age-label"
+                        id="select-age"
+                        label="Select Duration"
+                        // value={age}
+                        // onChange={handleChange}
+                        className="bg-white border-0 rounded w-90"
+
+                    >
+                        <MenuItem value={3}>3 Months</MenuItem>
+                        <MenuItem value={6}>6 Months</MenuItem>
+                        <MenuItem value={12}>12 Months</MenuItem>
+                    </Select>
+                </FormControl>
 
 
 
