@@ -37,8 +37,8 @@ const footerLinks = [
     {
         title: "Features",
         links: [
-            { id: 3, name: "Buy Crypto", url: "#" },
-            { id: 4, name: "Swaps", url: "#" },
+            // { id: 3, name: "Buy Crypto", url: "#" },
+            // { id: 4, name: "Swaps", url: "#" },
             { id: 5, name: "Staking", url: "#" },
             { id: 6, name: "NFTs", url: "#" },
             { id: 7, name: "Security", url: "#" },
@@ -75,8 +75,6 @@ const socialIcons = [
     <GithubIcon />,
     <InstagramIcon />,
     <TwitterIcon />,
-    // <RedditIcon />,
-    // <TelegramIcon />,
     <YoutubeIcon />,
 ];
 
@@ -95,7 +93,6 @@ const Footer = () => {
 
     return (
         <Box className="w-full flex justify-center " id="footer">
-            {/* <Box className="flex flex-col bg-[#577DF4] w-full max-w-7xl rounded-2xl shadow-[0px_4px_184px_#a9abb533] "></Box> */}
             <Box
                 className="w-full max-w-7xl"
                 sx={{
