@@ -32,7 +32,7 @@ const navItems = [
         id: 2,
         label: "Features",
         submenu: [
-            { id: 21, name: "Earning", url: "https://vrcnetwork.app/earn" },
+            { id: 21, name: "stacking", url: "/stacking" },
             { id: 22, name: "Launchpad", url: "#" },
             { id: 23, name: "Swap", url: "#" },
         ],
@@ -43,7 +43,7 @@ const navItems = [
         url: "/support",
     },
 ];
-
+// https://vrcnetwork.app/earn
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [openMobileSubmenus, setOpenMobileSubmenus] = useState({});
