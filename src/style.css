@@ -5,3 +5,7 @@ html {
     scroll-padding-top: 100px;
     /* Adjust based on your navbar height */
 }
+
+/* .css-1pycje8-MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+    min-width: 0 !important;
+} */

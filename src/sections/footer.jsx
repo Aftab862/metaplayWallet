@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import logo from '../assets/MetaplayWallet.svg'
 
 import React from "react";
 import {
@@ -114,7 +114,7 @@ const Footer = () => {
                             <Avatar
                                 src={logo}
                                 alt="MetaPlay Wallet"
-                                sx={{ width: 250, height: "auto", mb: 1, borderRadius: "0" }}
+                                sx={{ width: 200, height: "auto", mb: 1, borderRadius: "0" }}
                             />
 
                         </Box>

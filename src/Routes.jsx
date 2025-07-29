@@ -28,7 +28,7 @@ const AppRoutes = () => {
                 <Route path="/web-download" Component={WebDownload} />
                 <Route path="/privacy-policy" Component={PrivacyPolicyPage} />
                 <Route path="/terms-of-use" Component={TermsOfService} />
-                <Route path="/stacking" Component={Stacking} />
+                <Route path="/staking" Component={Stacking} />
 
 
 

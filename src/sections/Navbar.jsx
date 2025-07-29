@@ -21,6 +21,13 @@ const pulse = keyframes`
 
 const navItems = [
     {
+        id: 0,
+        label: "Home",
+        url: "/",
+
+    },
+
+    {
         id: 1,
         label: "Wallet",
         submenu: [
@@ -32,7 +39,7 @@ const navItems = [
         id: 2,
         label: "Features",
         submenu: [
-            { id: 21, name: "stacking", url: "/stacking" },
+            { id: 21, name: "staking", url: "/staking" },
             { id: 22, name: "Launchpad", url: "#" },
             { id: 23, name: "Swap", url: "#" },
         ],
