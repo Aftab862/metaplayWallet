@@ -10,6 +10,7 @@ import WebDownload from './components/WebDownload';
 import PrivacyPolicyPage from './sections/PrivacyPolicy';
 import TermsOfService from './sections/TermsOfServices';
 import Stacking from './sections/Stacking';
+import CookieNotice from './sections/CookieNotice';
 
 const AppRoutes = () => {
     const { pathname: parms } = useLocation();
@@ -29,6 +30,7 @@ const AppRoutes = () => {
                 <Route path="/privacy-policy" Component={PrivacyPolicyPage} />
                 <Route path="/terms-of-use" Component={TermsOfService} />
                 <Route path="/staking" Component={Stacking} />
+                <Route path="/cookie-notice" Component={CookieNotice} />
 
 
 
