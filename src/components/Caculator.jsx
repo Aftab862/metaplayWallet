@@ -42,7 +42,7 @@ const Calculator = () => {
                     Earning Estimator
                 </Typography>
                 <Typography textAlign="center" variant='body1' mb={2}>
-                    Potential earnings from current APR*s
+                    Potential earnings from current APY
                 </Typography>
                 <Autocomplete
                     disablePortal
@@ -108,7 +108,7 @@ const Calculator = () => {
                         </Box>
                     )}
                 />
-                {value.id !== 2 && <FormControl
+                {/* {value?.id !== 2 && <FormControl
 
                     className='mb-3'
                 >
@@ -126,7 +126,7 @@ const Calculator = () => {
                         <MenuItem value={6}>6 Months</MenuItem>
                         <MenuItem value={12}>12 Months</MenuItem>
                     </Select>
-                </FormControl>}
+                </FormControl>} */}
 
 
                 <TextField
@@ -141,7 +141,7 @@ const Calculator = () => {
                 <Box className='flex justify-between mt-5  w-90'>
                     <Typography
                         variant='body1' mb={2}>
-                        Daily Earnings
+                        3 Months Earning
                     </Typography>
                     <Typography variant='body1' color='primary' mb={2}>
                         + 0.002617 AXL
@@ -150,7 +150,7 @@ const Calculator = () => {
                 <Box className='flex justify-between   w-90'>
                     <Typography
                         variant='body1' mb={2}>
-                        Monthly Earnings
+                        06 Months Earning
                     </Typography>
                     <Typography variant='body1' color='primary' mb={2}>
                         + 0.002617 AXL
@@ -159,7 +159,7 @@ const Calculator = () => {
                 <Box className='flex justify-between  mb-5 w-90'>
                     <Typography
                         variant='body1' mb={2}>
-                        Yearly Earnings
+                        Yearly Earning
                     </Typography>
                     <Typography variant='body1' color='primary' mb={2}>
                         + 0.002617 AXL
