@@ -14,13 +14,13 @@ const browsers = [
 const WebDownload = () => {
     return (
         <div>
-            <Box className=" hidden md:flex w-full items-center justify-center px-4 py-20   ">
+            <Box className="w-full flex items-center justify-center px-4 py-4 md:py-16">
                 <Box
                     sx={{
                         background: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.64734820868138%,#f1f3f7)"
                     }}
                     className="flex flex-col w-full max-w-7xl rounded-3xl shadow-[0px_4px_184px_#a9abb522] p-8 md:p-16 relative bg-opacity-30 backdrop-blur-xl">
-                    <Box className="flex flex-col-reverse md:flex-row items-center gap-12">
+                    <Box className="flex flex-col md:flex-row items-center gap-12">
 
                         <Stack className='flex-1'>
                             <Typography
@@ -43,10 +43,9 @@ const WebDownload = () => {
                                         key={browser.name}
                                         className="p-6 rounded-2xl bg-white bg-opacity-60 shadow-lg backdrop-blur-md flex flex-col items-center transition-transform transform hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
                                     >
-                                        <img src={browser.icon} alt="" style={{
-                                            width: "80px",
-                                            height: "80px"
-                                        }} />
+                                        <img src={browser.icon} alt=""
+                                            className="w-[50px] md:w-[70px]  h-[50px] md:h-[70px]"
+                                        />
                                         <h3 className="mt-4 font-semibold text-gray-800">{browser.name}</h3>
                                     </div>
                                 ))}
