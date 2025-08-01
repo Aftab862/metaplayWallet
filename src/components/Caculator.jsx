@@ -1,10 +1,16 @@
-import React from 'react'
-import metaPlay from "../assets/MetaplayWallet.svg"
-import vrcn from "../assets/vrcn.png"
-import { Autocomplete, Avatar, Box, Button, FormControl, Input, InputLabel, MenuItem, Select, Stack, TextField, Typography } from '@mui/material'
+import React from 'react';
+import metaPlay from "../assets/MetaplayWallet.svg";
+import vrcn from "../assets/vrcn.png";
+import {
+    Autocomplete,
+    Avatar,
+    Box,
+    TextField,
+    Typography,
+    Stack,
+} from '@mui/material';
 import GenericButton from './GenericButton';
 import { useNavigate } from 'react-router-dom';
-
 
 const coinOptions = [
     {
@@ -21,95 +27,105 @@ const coinOptions = [
     },
 ];
 
-
 const Calculator = () => {
     const [value, setValue] = React.useState(coinOptions[0]);
     const navigate = useNavigate();
 
     return (
+        <Box
+            sx={{
+                background: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.64%,#f1f3f7)",
+                p: { xs: 3, sm: 4, md: 6 },
+                borderRadius: "24px",
 
-        <Box sx={{
-            background: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.64734820868138%,#f1f3f7)"
-        }}
-            mt={5}
 
+            }}
             className="flex flex-col w-full max-w-7xl rounded-3xl
-                    p-3 md:p-3 relative  bg-opacity-30 backdrop-blur-xl "
-        // shadow-[0px_4px_184px_#a9abb522]
+                    p-3 md:p-3 relative my-10  bg-opacity-30 backdrop-blur-xl "
         >
-            <Box className="p-10 flex flex-col justify-center items-center">
-                <Typography
-                    textAlign="center" variant='h5' mb={2}>
+            <Box className="flex flex-col items-center text-center">
+                <Typography variant="h5" fontWeight="bold" mb={1}>
                     Earning Estimator
                 </Typography>
-                <Typography textAlign="center" variant='body1' mb={2}>
+                <Typography variant="body1" mb={3}>
                     Potential earnings from current APY
                 </Typography>
-                <Autocomplete
-                    disablePortal
-                    className='relative mb-3 bg-white rounded w-90'
-                    value={value}
-                    // freeSolo
-                    onChange={(event, newValue) => {
-                        setValue(newValue);
-                    }}
-                    options={coinOptions}
-                    getOptionLabel={(option) => option.label}
 
-                    renderInput={(params) => (
-                        <TextField {...params} label="Select Asset" variant="outlined" />
-                    )}
-                    renderOption={(props, option) => (
-                        <Box
-                            component="li"
-                            {...props}
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                // justifyContent: 'space-between',
-                                px: 2,
-                                py: 1,
-                                borderBottom: '1px solid #f0f0f0',
-                                transition: 'all 0.2s ease-in-out',
-                                '&:hover': {
-                                    backgroundColor: '#f5f5f5',
-                                },
-                            }}
-                        >
-                            {/* Left Side: Icon + Label */}
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                <Avatar
-                                    src={option.icon}
-                                    alt={option.label}
-                                    sx={{ width: 28, height: 28 }}
-                                />
-                                <Typography fontWeight={500} fontSize={14}>
-                                    {option.label}
-                                </Typography>
-                            </Box>
-                        </Box>
-                    )}
-
-                    isOptionEqualToValue={(option, value) => option.label === value.label}
-                    renderTags={() => null}
-                    renderValue={(option) => (
-                        <Box sx={{ position: "reltive", display: 'flex', alignItems: 'center', gap: 1, justifyContent: "space-between" }}>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: "space-between", }}>
-                                <Avatar src={option?.icon} alt={option?.label} sx={{ width: 35, height: 35 }} />
-                                <Typography variant="body1">{option?.label}</Typography>
-                            </Box>
-                            <Typography
-                                variant="body1"
-                                position="absolute"
-                                right={65}
-                                color='primary'
+                <Stack spacing={2} >
+                    <Autocomplete
+                        disablePortal
+                        className=' mb-3 bg-white rounded w-auto md:w-90'
+                        value={value}
+                        onChange={(e, newValue) => setValue(newValue)}
+                        options={coinOptions}
+                        getOptionLabel={(option) => option.label}
+                        renderInput={(params) => (
+                            <TextField {...params} label="Select Asset" variant="outlined" />
+                        )}
+                        renderOption={(props, option) => (
+                            <Box
+                                component="li"
+                                {...props}
+                                sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: 1,
+                                    px: 2,
+                                    py: 1,
+                                    borderBottom: '1px solid #f0f0f0',
+                                    '&:hover': { backgroundColor: '#f5f5f5' },
+                                }}
                             >
-                                {/* {option?.percentage === 0 ? "" : `${option?.percentage}%`} */}
-                            </Typography>
+                                <Avatar src={option.icon} alt={option.label} sx={{ width: 28, height: 28 }} />
+                                <Typography fontSize={14}>{option.label}</Typography>
+                            </Box>
+                        )}
+                        isOptionEqualToValue={(option, val) => option.label === val.label}
+                    />
+
+                    <TextField
+                        placeholder="Enter Amount"
+                        variant="outlined"
+                        type="number"
+                        fullWidth
+                        className="bg-white"
+                    />
+
+                    {[
+                        { label: "3 Months Earning", value: "+ 0.0617 AXL" },
+                        { label: "06 Months Earning", value: "+ 0.0617 AXL" },
+                        { label: "Yearly Earning", value: "+ 0.0617 AXL" },
+                    ].map((item, idx) => (
+                        <Box
+                            key={idx}
+                            display="flex"
+                            justifyContent="space-between"
+                            px={1}
+                        >
+                            <Typography>{item.label}</Typography>
+                            <Typography color="primary">{item.value}</Typography>
                         </Box>
-                    )}
-                />
-                {/* {value?.id !== 2 && <FormControl
+                    ))}
+
+                    <Box mt={2} display="flex" justifyContent="center">
+                        <GenericButton
+                            title="Earn Now"
+                            PX={5}
+                            PY={1.5}
+                            btnHandler={() => navigate("/download")}
+                        />
+                    </Box>
+                </Stack>
+            </Box>
+        </Box>
+    );
+};
+
+export default Calculator;
+
+
+
+{/* {value?.id !== 2 && <FormControl
 
                     className='mb-3'
                 >
@@ -128,58 +144,3 @@ const Calculator = () => {
                         <MenuItem value={12}>12 Months</MenuItem>
                     </Select>
                 </FormControl>} */}
-
-
-                <TextField
-
-                    placeholder="Enter Amount"
-                    variant="outlined"
-                    className='w-90 bg-white mb-5  border-0  rounded'
-                    type='number'
-
-                />
-
-                <Box className='flex justify-between mt-5  w-90'>
-                    <Typography
-                        variant='body1' mb={2}>
-                        3 Months Earning
-                    </Typography>
-                    <Typography variant='body1' color='primary' mb={2}>
-                        + 0.002617 AXL
-                    </Typography>
-                </Box>
-                <Box className='flex justify-between   w-90'>
-                    <Typography
-                        variant='body1' mb={2}>
-                        06 Months Earning
-                    </Typography>
-                    <Typography variant='body1' color='primary' mb={2}>
-                        + 0.002617 AXL
-                    </Typography>
-                </Box>
-                <Box className='flex justify-between  mb-5 w-90'>
-                    <Typography
-                        variant='body1' mb={2}>
-                        Yearly Earning
-                    </Typography>
-                    <Typography variant='body1' color='primary' mb={2}>
-                        + 0.002617 AXL
-                    </Typography>
-                </Box>
-
-
-                <GenericButton
-                    title="Earn Now"
-                    PX={5}
-                    PY={1.5}
-                    btnHandler={() => navigate("/download")}
-                />
-
-
-            </Box>
-        </Box>
-
-    )
-}
-
-export default Calculator

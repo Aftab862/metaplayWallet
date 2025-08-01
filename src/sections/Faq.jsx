@@ -32,9 +32,9 @@ const FAQSection = () => {
     };
 
     return (
-        <Container maxWidth="md" className="mt-20">
+        <Container maxWidth="md" >
             <Typography
-                variant="h4"
+                variant="h5"
                 align="center"
                 gutterBottom
                 sx={{ fontWeight: "bold", mb: 4 }}

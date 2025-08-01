@@ -57,7 +57,7 @@ const Stacking = () => {
                                 PY={1.5}
                                 PX={3}
                                 iconType="download"
-                                className="w-[35%]"
+                                className="w-[50%] md:w-[35%]"
                                 btnHandler={() => navigate("/download")}
                             />
 
