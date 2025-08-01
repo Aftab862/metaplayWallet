@@ -152,7 +152,7 @@ const Navbar = () => {
                     className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
                 >
                     <div className="p-4 flex justify-between items-center border-b">
-                        <img src={logo} alt="Logo" className="h-5" />
+                        <img src={logo} alt="Logo" className="h-10 w-25" />
                         <button onClick={() => setMobileMenuOpen(false)}>
                             <X size={24} />
                         </button>
@@ -165,7 +165,11 @@ const Navbar = () => {
                                     className="flex justify-between items-center cursor-pointer"
                                     onClick={() => toggleMobileSubmenu(item.id)}
                                 >
-                                    <span>{item.label}</span>
+                                    <Link to={item.url} onClick={() => handleClickAway(item.id)} className="flex items-center gap-1 cursor-pointer hover:text-indigo-600"
+
+                                    >
+                                        {item.label}
+                                    </Link>
                                     {item.submenu && (
                                         <ChevronDown
                                             className={`w-4 h-4 transition-transform ${openMobileSubmenus[item.id] ? 'rotate-180' : ''
