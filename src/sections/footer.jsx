@@ -167,7 +167,8 @@ const Footer = () => {
                                 <Grid item xs={6}>
                                     <Button
                                         variant="outlined"
-                                        fullWidth
+
+                                        className='w-[200px] md:w-[auto]'
                                         endIcon={<img src={iosIcon} alt="iOS" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
 
@@ -180,7 +181,8 @@ const Footer = () => {
                                 <Grid item xs={6}>
                                     <Button
                                         variant="outlined"
-                                        fullWidth
+                                        className='w-[200px] md:w-[auto]'
+
 
                                         endIcon={<img src={chromeIcon} alt="Chrome" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
@@ -193,7 +195,8 @@ const Footer = () => {
                                 <Grid item xs={6}>
                                     <Button
                                         variant="outlined"
-                                        fullWidth
+                                        className='w-[200px] md:w-[auto]'
+
                                         endIcon={<img src={androidIcon} alt="APK" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
 
@@ -207,7 +210,8 @@ const Footer = () => {
                                 <Grid item xs={6}>
                                     <Button
                                         variant="outlined"
-                                        fullWidth
+                                        className='w-[200px] md:w-[auto]'
+
                                         endIcon={<img src={apkIcon} alt="Android" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
 
@@ -222,7 +226,7 @@ const Footer = () => {
                     </Grid>
 
                     <Grid item size={{ xs: 12, md: 5, }}>
-                        <Typography mt={4} fontWeight="bold" className="text-center md:text-start" variant='h6'>Stay Connected:</Typography>
+                        <Typography mt={{ xs: 1, md: 3 }} fontWeight="bold" className="text-center md:text-start" variant='h6'>Stay Connected:</Typography>
                         <Box
                             display="flex"
                             flexWrap="wrap"
