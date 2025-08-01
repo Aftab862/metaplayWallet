@@ -39,7 +39,7 @@ const footerLinks = [
         links: [
             // { id: 3, name: "Buy Crypto", url: "#" },
             // { id: 4, name: "Swaps", url: "#" },
-            { id: 5, name: "Staking", url: "#" },
+            { id: 5, name: "Staking", url: "/staking" },
             { id: 6, name: "NFTs", url: "#" },
             { id: 7, name: "Security", url: "#" },
             { id: 8, name: "SWIFT: Smart Contract Wallet", url: "#" },
@@ -70,14 +70,13 @@ const footerLinks = [
 
 
 const socialIcons = [
-    <Linkedin />,
-    <FacebookIcon />,
-    <GithubIcon />,
-    <InstagramIcon />,
-    <TwitterIcon />,
-    <YoutubeIcon />,
+    // { icon: <Linkedin />, link: "https://linkedin.com" },
+    // { icon: <FacebookIcon />, link: "https://facebook.com" },
+    // { icon: <GithubIcon />, link: "https://github.com" },
+    { icon: <InstagramIcon />, link: "https://www.instagram.com/metaplayw/" },
+    { icon: <TwitterIcon />, link: "https://x.com/MetaplayW" },
+    // { icon: <YoutubeIcon />, link: "https://youtube.com" },
 ];
-
 
 // Real image URLs
 const iosIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg";
@@ -171,6 +170,8 @@ const Footer = () => {
                                         fullWidth
                                         endIcon={<img src={iosIcon} alt="iOS" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        component="a"
+                                        href="/mobile-download"
                                     >
                                         Download for iOS
                                     </Button>
@@ -181,6 +182,8 @@ const Footer = () => {
                                         fullWidth
                                         endIcon={<img src={chromeIcon} alt="Chrome" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        component="a"
+                                        href="/web-download"
                                     >
                                         Download Extension
                                     </Button>
@@ -191,6 +194,9 @@ const Footer = () => {
                                         fullWidth
                                         endIcon={<img src={androidIcon} alt="APK" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        component="a"
+                                        href="/mobile-download"
+
                                     >
                                         Download  APK
                                     </Button>
@@ -201,6 +207,8 @@ const Footer = () => {
                                         fullWidth
                                         endIcon={<img src={apkIcon} alt="Android" width={20} height={20} />}
                                         sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        component="a"
+                                        href="/mobile-download"
                                     >
                                         Download for  Android
                                     </Button>
@@ -209,21 +217,24 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item size={{ xs: 12, md: 5 }}>
+                    <Grid item size={{ xs: 12, md: 5, alignItems: "center", textAlign: "center" }}>
                         <Typography mt={4} fontWeight="bold" variant='h6'>Stay Connected:</Typography>
                         <Box
                             display="flex"
-                            // alignItems="center"
                             flexWrap="wrap"
                             gap={2}
                             height="100%"
                             mt={{ xs: 2, md: 2 }}
                         >
-                            {socialIcons.map((icon, idx) => (
+                            {socialIcons.map((item, idx) => (
                                 <Box
                                     key={idx}
+                                    component="a"
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     sx={{
-                                        bgcolor: "#000",
+                                        bgcolor: "#1976d2",
                                         color: "#fff",
                                         p: 1,
                                         borderRadius: "6px",
@@ -231,13 +242,20 @@ const Footer = () => {
                                         alignItems: "center",
                                         justifyContent: "center",
                                         width: "35px",
-                                        height: "35px"
+                                        height: "35px",
+                                        textDecoration: "none",
+                                        transition: "all 0.3s ease",
+                                        "&:hover": {
+                                            bgcolor: "#1976d2",
+                                            transform: "scale(1.1)"
+                                        }
                                     }}
                                 >
-                                    {icon}
+                                    {item.icon}
                                 </Box>
                             ))}
                         </Box>
+
                     </Grid>
                 </Grid>
 
