@@ -28,7 +28,6 @@ const Stacking = () => {
                                 variant="h2"
                                 className="  text-[#171717] text-start"
                                 sx={{
-                                    fontFamily: "SF Pro Rounded, -apple-system, BlinkMacSystemFont, sans-serif",
                                     fontWeight: 700,
                                     fontSize: { xs: "28px", md: "44px", lg: "56px" },
                                     lineHeight: { xs: "36px", md: "44px", lg: "56px" },
@@ -45,7 +44,6 @@ const Stacking = () => {
                                 variant="h2"
                                 className="text-start  text-[#171717] "
                                 sx={{
-                                    fontFamily: "SF Pro Rounded, -apple-system, BlinkMacSystemFont, sans-serif",
                                     fontWeight: 300,
                                     fontSize: { xs: "16px", md: "18px", lg: "20px" },
                                     lineHeight: { xs: "36px", md: "54px", lg: "36px" },

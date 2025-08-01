@@ -23,6 +23,12 @@ const CookieNotice = () => {
 
                 {/* Sidebar ToC */}
                 <div className="w-full max-w-7xl space-y-6 text-sm sm:text-base">
+
+
+                    <p>
+                        MetaPlay Wallet does not use cookies or tracking technologies. Your data stays private
+                    </p>
+
                     <aside className="self-start py-5 hidden md:block italic font-bold">
                         <ul className="space-y-3 text-sm font-medium">
                             {sections.map((sec) => (

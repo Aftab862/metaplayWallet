@@ -27,7 +27,6 @@ const WebDownload = () => {
                                 variant="h2"
                                 className="text-center font-bold text-[#171717]"
                                 sx={{
-                                    fontFamily: "SF Pro Rounded, -apple-system, BlinkMacSystemFont, sans-serif",
                                     fontWeight: 800,
                                     fontSize: { xs: "28px", md: "44px", lg: "56px" },
                                     lineHeight: { xs: "36px", md: "54px", lg: "66px" },

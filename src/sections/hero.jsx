@@ -227,7 +227,6 @@ const Hero = () => {
                     top: "-10%",
                     WebkitTextStroke: '1px #000000',
                     opacity: 0.1,
-                    fontFamily: 'Poppins, Helvetica',
                     fontWeight: 600,
                     color: 'transparent',
                     fontSize: '40vw',

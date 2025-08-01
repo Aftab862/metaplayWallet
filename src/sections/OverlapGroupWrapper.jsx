@@ -58,7 +58,6 @@ export const OverlapGroupWrapper = () => {
                             <Typography
                                 variant="h3"
                                 sx={{
-                                    fontFamily: "Poppins, Helvetica",
                                     fontWeight: 500,
                                     fontSize: { xs: "32px", md: "48px", lg: "64px" },
                                     lineHeight: { xs: "40px", md: "56px", lg: "72px" },
@@ -71,7 +70,6 @@ export const OverlapGroupWrapper = () => {
                             <Typography
                                 variant="body1"
                                 sx={{
-                                    fontFamily: "Poppins, Helvetica",
                                     fontSize: { xs: "16px", md: "24px" },
                                     lineHeight: "40px",
                                     maxWidth: "600px",

@@ -6,6 +6,11 @@ html {
     /* Adjust based on your navbar height */
 }
 
+* {
+    font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif !important;
+}
+
+
 /* .css-1pycje8-MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
     min-width: 0 !important;
 } */

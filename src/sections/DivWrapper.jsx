@@ -65,7 +65,6 @@ export const DivWrapper = () => {
                         <Typography
                             variant="h5"
                             sx={{
-                                fontFamily: "Poppins",
                                 fontSize: { xs: "16px", md: "24px" },
                                 lineHeight: "32px",
                                 maxWidth: "400px",
@@ -79,7 +78,6 @@ export const DivWrapper = () => {
                         <Typography
                             variant="h3"
                             sx={{
-                                fontFamily: "Poppins",
                                 fontWeight: 500,
                                 color: "white",
                                 fontSize: { xs: "32px", md: "48px", lg: "54px" },
