@@ -17,13 +17,13 @@ const Stacking = () => {
                 <Box sx={{
                     // background: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.64734820868138%,#f1f3f7)"
                 }}
-                    mb={10}
+
                     className="flex flex-col w-full max-w-7xl rounded-3xl
                     p-3 md:p-3 relative  bg-opacity-30 backdrop-blur-xl "
                 // shadow-[0px_4px_184px_#a9abb522]
                 >
-                    <Box className="flex flex-col-reverse md:flex-row items-center gap-12 px-5">
-                        <Stack className='p-16 break-words text-start'>
+                    <Box className="flex flex-col md:flex-row items-center gap-12 px-2 md:px-5">
+                        <Stack className='p-2 md:p-16 break-words text-start'>
                             <Typography
                                 variant="h2"
                                 className="  text-[#171717] text-start"
@@ -65,6 +65,7 @@ const Stacking = () => {
                         </Stack>
                         <Box
                             component="img"
+                            className='hidden md:flex'
                             src='https://framerusercontent.com/images/WB7cWZkCOhrZwymgwc1ZSbxVHw.png'
                             // src="https://framerusercontent.com/images/ojR9drUQuF1ZfjCgBAEzJnQE.png?scale-down-to=1024"
                             alt="Download Devices"
@@ -84,7 +85,8 @@ const Stacking = () => {
                     component="img"
                     src={cryptoImages}
                     width={1000}
-                    className='my-10'
+                    className='my-2 md:my-10'
+
                 />
 
                 <Calculator />

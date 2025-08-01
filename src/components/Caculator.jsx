@@ -31,7 +31,8 @@ const Calculator = () => {
         <Box sx={{
             background: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.64734820868138%,#f1f3f7)"
         }}
-            my={10}
+            mt={5}
+
             className="flex flex-col w-full max-w-7xl rounded-3xl
                     p-3 md:p-3 relative  bg-opacity-30 backdrop-blur-xl "
         // shadow-[0px_4px_184px_#a9abb522]

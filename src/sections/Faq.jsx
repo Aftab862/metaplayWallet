@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Accordion,
     AccordionSummary,
@@ -7,7 +7,7 @@ import {
     Container,
     Box,
 } from "@mui/material";
-import { ChevronDown, ExpandIcon } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
@@ -22,12 +22,17 @@ const faqs = [
         question: "What are the risks involved?",
         answer: "While using Trust Wallet, you're interacting directly with decentralized protocols, whether you decide to use in-wallet earn options or earn opportunities via Web3 dApps. Risks may include smart contract vulnerabilities, market volatility or other factors. Trust Wallet is an interface to these services and doesn't control the underlying protocols. It's important to conduct your own research before staking with any protocol.",
     },
-
 ];
 
 const FAQSection = () => {
+    const [expanded, setExpanded] = useState(null); // Track the currently expanded panel
+
+    const handleChange = (panelIndex) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panelIndex : null);
+    };
+
     return (
-        <Container maxWidth="md" sx={{ py: 8 }}>
+        <Container maxWidth="md" className="mt-20">
             <Typography
                 variant="h4"
                 align="center"
@@ -41,10 +46,10 @@ const FAQSection = () => {
                 {faqs.map((faq, index) => (
                     <Accordion
                         key={index}
+                        expanded={expanded === index}
+                        onChange={handleChange(index)}
                         sx={{
                             mb: 2,
-                            // borderRadius: "12px",
-                            // boxShadow: 3,
                             backgroundColor: "#f5f5f5",
                             transition: "0.3s",
                             "&:hover": {
@@ -54,13 +59,19 @@ const FAQSection = () => {
                     >
                         <AccordionSummary
                             expandIcon={<ChevronDown />}
-
-                            sx={{ fontWeight: "bold", fontSize: "1.1rem", px: 2, py: 1 }}
+                            sx={{
+                                fontWeight: "bold",
+                                fontSize: "1.1rem",
+                                px: 2,
+                                py: 1,
+                            }}
                         >
                             {faq.question}
                         </AccordionSummary>
                         <AccordionDetails>
-                            <Typography color="text.secondary">{faq.answer}</Typography>
+                            <Typography color="text.secondary">
+                                {faq.answer}
+                            </Typography>
                         </AccordionDetails>
                     </Accordion>
                 ))}
