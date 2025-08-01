@@ -187,6 +187,7 @@ const Hero = () => {
 
             {/* Scroll Down Label */}
             <Typography
+                className='hidden md:block'
                 sx={{
                     zIndex: 1,
                     position: 'absolute',
@@ -196,7 +197,7 @@ const Hero = () => {
                     transform: 'rotate(180deg)',
                     fontSize: '14px',
                     color: '#000',
-                    display: { sm: "none", md: "block" },
+
                 }}
             >
                 <a href="#footer">
@@ -243,6 +244,7 @@ const Hero = () => {
                 src={subtract}
                 alt="Wallet Icon"
                 loading='lazy'
+                className='hidden md:block'
                 sx={{
                     position: "absolute",
                     display: { sm: "none", md: "block" },
@@ -252,6 +254,7 @@ const Hero = () => {
                     bottom: "25%",
                     p: 1,
                     zIndex: 0
+
                 }}
             />
         </Box>
