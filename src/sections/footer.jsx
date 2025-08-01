@@ -113,7 +113,7 @@ const Footer = () => {
                             <Avatar
                                 src={logo}
                                 alt="MetaPlay Wallet"
-                                sx={{ width: 200, height: "auto", mb: 1, borderRadius: "0" }}
+                                sx={{ width: { xs: 130, md: 200 }, height: "auto", mb: 1, borderRadius: "0" }}
                             />
 
                         </Box>
@@ -124,7 +124,7 @@ const Footer = () => {
                     <Grid item size={{ xs: 12, md: 9 }}>
                         <Grid container spacing={4}>
                             {footerLinks.map((col) => (
-                                <Grid item size={{ xs: 12, sm: 6, md: 3 }} key={col.title}>
+                                <Grid item size={{ xs: 6, sm: 6, md: 3 }} key={col.title}>
                                     <Typography fontWeight="bold" gutterBottom>
                                         {col.title}
                                     </Typography>
@@ -154,7 +154,7 @@ const Footer = () => {
 
                     <Grid item size={{ xs: 12, md: 4 }}>
                         <Box display="flex" flexDirection="column"  >
-                            <Box mt={4} textAlign="start">
+                            <Box mt={4} className="text-center md:text-start">
                                 <Typography variant="subtitle2" fontWeight="bold" >
                                     Download Trust Wallet
                                 </Typography>
@@ -163,13 +163,14 @@ const Footer = () => {
                                 </Typography>
                             </Box>
 
-                            <Grid container spacing={1} mt={1}>
+                            <Grid container spacing={1} mt={1} justifyContent={{ xs: "center", md: "start" }}>
                                 <Grid item xs={6}>
                                     <Button
                                         variant="outlined"
                                         fullWidth
                                         endIcon={<img src={iosIcon} alt="iOS" width={20} height={20} />}
-                                        sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
+
                                         component="a"
                                         href="/mobile-download"
                                     >
@@ -180,8 +181,9 @@ const Footer = () => {
                                     <Button
                                         variant="outlined"
                                         fullWidth
+
                                         endIcon={<img src={chromeIcon} alt="Chrome" width={20} height={20} />}
-                                        sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
                                         component="a"
                                         href="/web-download"
                                     >
@@ -193,7 +195,8 @@ const Footer = () => {
                                         variant="outlined"
                                         fullWidth
                                         endIcon={<img src={androidIcon} alt="APK" width={20} height={20} />}
-                                        sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
+
                                         component="a"
                                         href="/mobile-download"
 
@@ -206,7 +209,8 @@ const Footer = () => {
                                         variant="outlined"
                                         fullWidth
                                         endIcon={<img src={apkIcon} alt="Android" width={20} height={20} />}
-                                        sx={{ borderRadius: "24px", textTransform: "none" }}
+                                        sx={{ borderRadius: "24px", textTransform: "none", justifyContent: "space-between", }}
+
                                         component="a"
                                         href="/mobile-download"
                                     >
@@ -217,13 +221,14 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item size={{ xs: 12, md: 5, alignItems: "center", textAlign: "center" }}>
-                        <Typography mt={4} fontWeight="bold" variant='h6'>Stay Connected:</Typography>
+                    <Grid item size={{ xs: 12, md: 5, }}>
+                        <Typography mt={4} fontWeight="bold" className="text-center md:text-start" variant='h6'>Stay Connected:</Typography>
                         <Box
                             display="flex"
                             flexWrap="wrap"
                             gap={2}
                             height="100%"
+                            justifyContent={{ xs: "center", md: "start" }}
                             mt={{ xs: 2, md: 2 }}
                         >
                             {socialIcons.map((item, idx) => (
@@ -233,6 +238,7 @@ const Footer = () => {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
+
                                     sx={{
                                         bgcolor: "#1976d2",
                                         color: "#fff",
