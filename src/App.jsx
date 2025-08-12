@@ -4,7 +4,7 @@ import Hero from "./sections/hero";
 import { FrameWrapper } from "./sections/FrameWrapper";
 import { OverlapGroupWrapper } from "./sections/OverlapGroupWrapper";
 import MotionFadeIn from "./components/MotionFadeIn";
-import { ZeroPersonal } from "./sections/ZeroPersonal";
+import ZeroPersonal from "./sections/ZeroPersonal";
 
 // useEffect((
 //   Window.scrollTo(0)

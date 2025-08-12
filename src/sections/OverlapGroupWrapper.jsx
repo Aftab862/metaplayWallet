@@ -5,10 +5,8 @@ import { motion } from "framer-motion";
 import groupMobile from "../assets/groupMobile.png";
 import Security from "../assets/home/Security.png";
 import Community from "../assets/home/Community.png"
-import Shield from "../assets/Shield.svg";
-import Smiling from "../assets/Smiling.svg";
-import Stopwatch from "../assets/Stopwatch.svg";
-import Wallet from "../assets/Wallet.svg";
+import Safety from "../assets/home/Safety.png"
+import Chain from "../assets/home/Chain.png"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -32,6 +30,16 @@ export const OverlapGroupWrapper = () => {
       image: Security,
     },
     {
+      title: "Safety",
+      description: (
+        <>
+          Lorem Ipsum is simply dummy text <br />
+          Lorem Ipsum is simply dummy text{" "}
+        </>
+      ),
+      image: Safety,
+    },
+    {
       title: "Community",
       description: (
         <>
@@ -41,25 +49,16 @@ export const OverlapGroupWrapper = () => {
       ),
       image: Community,
     },
+
     {
-      title: "Card Three",
+      title: "Multi Chain",
       description: (
         <>
           Lorem Ipsum is simply dummy text <br />
           Lorem Ipsum is simply dummy text{" "}
         </>
       ),
-      image: Smiling,
-    },
-    {
-      title: "Card Four",
-      description: (
-        <>
-          Lorem Ipsum is simply dummy text <br />
-          Lorem Ipsum is simply dummy text{" "}
-        </>
-      ),
-      image: Shield,
+      image: Chain,
     },
   ];
 
@@ -147,8 +146,8 @@ export const OverlapGroupWrapper = () => {
                     src={item.image}
                     alt={item.title}
                     sx={{
-                      width: 60,
-                      height: 60,
+                      width: 100,
+                      height: 100,
                       objectFit: "contain",
                       marginBottom: 2,
                     }}
