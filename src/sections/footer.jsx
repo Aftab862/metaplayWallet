@@ -225,7 +225,7 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item size={{ xs: 12, md: 5, }}>
+                    {/* <Grid item size={{ xs: 12, md: 5, }}>
                         <Typography mt={{ xs: 1, md: 3 }} fontWeight="bold" className="text-center md:text-start" variant='h6'>Stay Connected:</Typography>
                         <Box
                             display="flex"
@@ -266,7 +266,7 @@ const Footer = () => {
                             ))}
                         </Box>
 
-                    </Grid>
+                    </Grid> */}
                 </Grid>
 
 
