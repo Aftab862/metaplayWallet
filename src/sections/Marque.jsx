@@ -108,7 +108,7 @@ export default function CryptoMarquee() {
             }}
         >
             <Typography variant="h4" fontWeight="600" mb={matches ? 5 : 2}>
-                Trending Coins
+                Supporting Coins
             </Typography>
 
             <Marquee pauseOnHover speed={40} gradient={matches}
