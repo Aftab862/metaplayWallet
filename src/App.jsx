@@ -7,34 +7,33 @@ import MotionFadeIn from "./components/MotionFadeIn";
 import ZeroPersonal from "./sections/ZeroPersonal";
 import Marquee from "./sections/Marque";
 
-// useEffect((
-//   Window.scrollTo(0)
-// ), [])
 
 const App = () => {
   return (
     <div>
-      <MotionFadeIn delay={0.1}>
-        <Hero />
-      </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
-        {/* <OverlapGroupWrapper /> */}
-      </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
-        <ZeroPersonal />
-      </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
-        {/* <FrameWrapper /> */}
-        <Marquee />
-      </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
-        <DivWrapper />
-      </MotionFadeIn>
+      {/* <MotionFadeIn delay={0}> */}
+      <Hero />
+      {/* </MotionFadeIn> */}
+
+      {/* <MotionFadeIn delay={0}> */}
+      <ZeroPersonal />
+      {/* </MotionFadeIn> */}
+      {/* <MotionFadeIn delay={0}> */}
+      <Marquee />
+      {/* </MotionFadeIn> */}
+      {/* <MotionFadeIn delay={0}> */}
+      <DivWrapper />
+      {/* </MotionFadeIn> */}
     </div>
   );
 };
 
 export default App;
+{/* <FrameWrapper /> */ }
+
+//  <MotionFadeIn delay={0}>
+//       <OverlapGroupWrapper />
+//     </MotionFadeIn>
 {
   /* <OverlapWrapper /> */
 }
