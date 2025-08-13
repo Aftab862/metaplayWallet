@@ -5,6 +5,7 @@ import { FrameWrapper } from "./sections/FrameWrapper";
 import { OverlapGroupWrapper } from "./sections/OverlapGroupWrapper";
 import MotionFadeIn from "./components/MotionFadeIn";
 import ZeroPersonal from "./sections/ZeroPersonal";
+import Marquee from "./sections/Marque";
 
 // useEffect((
 //   Window.scrollTo(0)
@@ -16,16 +17,17 @@ const App = () => {
       <MotionFadeIn delay={0.1}>
         <Hero />
       </MotionFadeIn>
-      <MotionFadeIn delay={0.2}>
+      <MotionFadeIn delay={0.1}>
         <OverlapGroupWrapper />
       </MotionFadeIn>
-      <MotionFadeIn delay={0.3}>
+      <MotionFadeIn delay={0.1}>
+        {/* <FrameWrapper /> */}
+        <Marquee />
+      </MotionFadeIn>
+      <MotionFadeIn delay={0.1}>
         <ZeroPersonal />
       </MotionFadeIn>
-      <MotionFadeIn delay={0.4}>
-        <FrameWrapper />
-      </MotionFadeIn>
-      <MotionFadeIn delay={0.5}>
+      <MotionFadeIn delay={0.1}>
         <DivWrapper />
       </MotionFadeIn>
     </div>
