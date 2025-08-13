@@ -3,13 +3,9 @@ import { Box, Grid, Typography, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
 
 import wallet from '../assets/wallet.png';
-import subtract from '../assets/subtract.svg';
 import subtract1 from '../assets/subtract-1.png';
-import mobile2 from '../assets/15-plus-5.png';
-import mobileFrame from '../assets/mobileframe.png';
-import appStore from '../assets/appstore.svg';
-import playStore from '../assets/playstore.svg';
-import { ArrowDownNarrowWide, ArrowDownToLine, ArrowUp, MoveDown } from 'lucide-react';
+import Group from '../assets/home/Group.png';
+import { ArrowUp } from 'lucide-react';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -19,11 +15,10 @@ const fadeInUp = {
 const Hero = () => {
     return (
         <Box
-            className="relative"
             sx={{
                 width: '100%',
                 minHeight: '100vh',
-                px: { xs: 2, md: 8 },
+                px: { xs: 2, sm: 3, md: 6, lg: 10 },
                 py: { xs: 6, md: 10 },
                 display: 'flex',
                 alignItems: 'center',
@@ -32,231 +27,150 @@ const Hero = () => {
                 background: 'linear-gradient(to right, #fff, #f8f6ff)',
             }}
         >
-            <Grid container spacing={8} alignItems="center" justifyContent="center">
+            {/* Content max width for huge screens */}
+            <Box sx={{ width: '100%', maxWidth: '1400px', mx: 'auto' }}>
+                <Grid
+                    container
+                    spacing={{ xs: 4, sm: 6, md: 8 }}
+                    alignItems="center"
+                    justifyContent="space-evenly"
+                >
+                    {/* LEFT: Text/CTA */}
+                    <Grid item xs={12} md={6}>
+                        <motion.div
+                            variants={fadeInUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
+                            <Box>
+                                <Stack
+                                    spacing={2}
+                                    alignItems={{ xs: 'center', md: 'flex-start' }}
+                                    textAlign={{ xs: 'center', md: 'left' }}
+                                >
+                                    <Box display="flex" flexWrap="wrap" justifyContent={{ xs: 'center', md: 'flex-start' }}>
+                                        <Typography
+                                            sx={{
+                                                fontSize: 'clamp(45px, 6vw, 84px)',
+                                                fontWeight: 600,
+                                                lineHeight: 1,
+                                            }}
+                                        >
+                                            Meta&nbsp;
+                                        </Typography>
+                                        <Box
+                                            component="img"
+                                            src={wallet}
+                                            loading="lazy"
+                                            alt="Wallet Icon"
+                                            sx={{
+                                                width: { xs: 80, sm: 110, md: 140, lg: 150 },
+                                                mx: 1,
+                                                p: { xs: 0.5, md: 1 },
+                                            }}
+                                        />
+                                    </Box>
 
-                {/* Left Text Section */}
-                <Grid item xs={12} md={4}>
-                    <motion.div
-                        variants={fadeInUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                    >
-                        <Box>
-                            <Stack spacing={2}>
-                                <Box display="flex" alignItems="center" flexWrap="wrap">
                                     <Typography
                                         sx={{
-                                            fontSize: { xs: '42px', md: '64px' },
-                                            fontWeight: '600',
+                                            fontSize: 'clamp(45px, 6vw, 84px)',
+                                            fontWeight: 600,
                                             lineHeight: 1,
                                         }}
                                     >
-                                        Meta&nbsp;
+                                        Play Wallet
                                     </Typography>
-                                    <Box
-                                        component="img"
-                                        src={wallet}
-                                        loading='lazy'
-                                        alt="Wallet Icon"
-                                        sx={{
-                                            width: '150px',
-                                            mx: 1,
-                                            p: 1,
-                                        }}
-                                    />
-                                </Box>
-                                <Typography
-                                    sx={{
-                                        fontSize: { xs: '42px', md: '64px' },
-                                        fontWeight: '600',
-                                        lineHeight: 1,
-                                    }}
-                                >
-                                    Play Wallet
-                                </Typography>
 
-                                <Typography sx={{ fontSize: '18px', color: '#000' }}>
-                                    Fast Easy Secure
-                                </Typography>
-                            </Stack>
+                                    <Typography sx={{ fontSize: { xs: 14, sm: 16, md: 18 }, color: '#000' }}>
+                                        Fast&nbsp;•&nbsp;Easy&nbsp;•&nbsp;Secure
+                                    </Typography>
+                                </Stack>
 
+                            </Box>
+                        </motion.div>
+                    </Grid>
+
+                    {/* RIGHT: Phone/Visual */}
+                    <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
+                        <motion.div
+                            variants={fadeInUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
                             <Box
                                 sx={{
-                                    mt: 8,
-                                    width: '220px',
                                     position: 'relative',
+                                    width: { xs: 'min(90vw, 360px)', sm: 'min(80vw, 440px)', md: 520, lg: 560 },
+                                    mx: { xs: 'auto', md: '0' },
                                 }}
                             >
                                 <Box
                                     component="img"
-                                    src={subtract1}
-                                    loading='lazy'
-                                    alt="See Video"
+                                    loading="lazy"
+                                    src={Group}
+                                    alt="App preview in phone frame"
                                     sx={{
+                                        display: 'block',
                                         width: '100%',
-                                        borderRadius: '24px',
+                                        height: 'auto',
                                     }}
                                 />
-                                <Typography
-                                    sx={{
-                                        position: 'absolute',
-                                        top: '8px',
-                                        right: '12px',
-                                        fontSize: '14px',
-                                        fontWeight: 500,
-                                        color: '#000',
-                                    }}
-                                >
-                                    See Video
-                                </Typography>
                             </Box>
-                        </Box>
-                    </motion.div>
+                        </motion.div>
+                    </Grid>
                 </Grid>
+            </Box>
 
-                {/* Middle Phone Section */}
-                <Grid item xs={12} md={4} zIndex={1}>
-                    <motion.div
-                        variants={fadeInUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                    >
-                        <Box sx={{ position: 'relative', width: '355px', mx: 'auto' }}>
-                            <Box
-                                component="img"
-                                loading='lazy'
-                                src={mobile2}
-                                alt="App Screen"
-                                sx={{
-                                    position: 'absolute',
-                                    top: '20px',
-                                    left: '25px',
-                                    width: '302px',
-                                    height: '654px',
-                                    borderRadius: '32px',
-                                }}
-                            />
-                            <Box
-                                component="img"
-                                loading='lazy'
-                                src={mobileFrame}
-                                alt="Phone Frame"
-                                sx={{
-                                    width: '355px',
-                                    height: '698px',
-                                    zIndex: 1,
-                                }}
-                            />
-                        </Box>
-                    </motion.div>
-                </Grid>
-
-                {/* Right Download Section */}
-                <Grid item xs={12} md={4} zIndex={1}>
-                    <motion.div
-                        variants={fadeInUp}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.3 }}
-                    >
-                        <Stack spacing={2} className="items-center md:items-start">
-                            <Typography
-                                sx={{
-                                    fontSize: { xs: '32px', md: '40px' },
-                                    fontWeight: 600,
-                                    color: '#000',
-                                }}
-                            >
-                                Mobile<br />Application
-                            </Typography>
-
-                            <Typography sx={{ fontSize: '16px', color: '#000' }}>
-                                Download App
-                            </Typography>
-
-                            <Stack direction="column" spacing={2}>
-                                <Box component="img" loading='lazy' src={playStore} alt="Play Store" sx={{ width: '154px' }} />
-                                <Box component="img" loading='lazy' src={appStore} alt="App Store" sx={{ width: '154px' }} />
-                            </Stack>
-                        </Stack>
-                    </motion.div>
-                </Grid>
-            </Grid>
-
-            {/* Scroll Down Label */}
-            <Typography
-                className='hidden md:block'
+            {/* Scroll Down Label (hidden on mobile) */}
+            <Box
+                component="a"
+                href="#footer"
+                className="hidden md:block"
                 sx={{
                     zIndex: 1,
                     position: 'absolute',
-                    right: "12%",
-                    bottom: "35%",
+                    right: { sm: '1.5rem', md: '12%' },
+                    bottom: { sm: '15%', md: '25%' },
                     writingMode: 'vertical-rl',
                     transform: 'rotate(180deg)',
-                    fontSize: '14px',
+                    fontSize: 14,
                     color: '#000',
-
+                    textDecoration: 'none',
                 }}
             >
-                <a href="#footer">
-                    Scroll Down
-                    <motion.div
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        style={{
-                            position: "absolute",
-                            right: "0",
-                            top: "-35%",
+                <Typography component="span">Scroll Down</Typography>
+                <motion.div
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                    style={{ position: 'absolute', right: 2, top: '-35%' }}
+                >
+                    <ArrowUp size={18} />
+                </motion.div>
+            </Box>
 
-                        }}
-                    >
-
-                        <ArrowUp />
-                    </motion.div>
-
-                </a>
-            </Typography>
-
-            {/* Big Background Text */}
+            {/* Big Background Text (desktop only) */}
             <Typography
                 className="hidden md:flex"
-                variant="h5"
                 sx={{
                     position: 'absolute',
-                    top: "-10%",
+                    top: { md: '-6%', lg: '-10%' },
+                    left: 0,
+                    right: 0,
                     WebkitTextStroke: '1px #000000',
-                    opacity: 0.1,
+                    opacity: 0.08,
                     fontWeight: 600,
                     color: 'transparent',
-                    fontSize: '40vw',
+                    fontSize: { md: '35vw', lg: '32vw', xl: '28vw' },
                     textAlign: 'center',
-                    lineHeight: 'normal',
+                    lineHeight: 1,
+                    pointerEvents: 'none',
+                    userSelect: 'none',
                 }}
             >
                 meta
             </Typography>
-
-            {/* Decorative Image */}
-            <Box
-                component="img"
-                src={subtract}
-                alt="Wallet Icon"
-                loading='lazy'
-                className='hidden md:block'
-                sx={{
-                    position: "absolute",
-                    display: { sm: "none", md: "block" },
-                    width: '450px',
-                    mx: 1,
-                    right: "10%",
-                    bottom: "25%",
-                    p: 1,
-                    zIndex: 0
-
-                }}
-            />
         </Box>
     );
 };
