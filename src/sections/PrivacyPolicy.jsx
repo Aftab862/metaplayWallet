@@ -153,10 +153,7 @@ const PrivacyPolicy = () => {
                         <li>Be asked for explicit consent</li>
                         <li>Be given the option to opt out at any time</li>
                     </ul>
-                    <p>
-                        For questions or concerns related to this Privacy Policy, contact us at:
-                        <br />📧 Email: <a href="mailto:support@metaplaywallet.com" className="text-blue-600 underline">support@metaplaywallet.com</a>
-                    </p>
+
 
                     <h2 id="cookies" className="font-bold">8. Cookies Policy</h2>
                     <p>
@@ -191,6 +188,10 @@ const PrivacyPolicy = () => {
                         MetaPlay Wallet is designed to put you in control. We do not collect or store personal
                         data, and your keys stay on your device. Our mission is to provide secure, decentralized
                         access to Web3 while respecting your privacy at every step.
+                    </p>
+                    <p>
+                        For questions or concerns related to this Privacy Policy, contact us at:
+                        <br /> Email: <a href="mailto:support@metaplaywallet.com" className="text-blue-600 underline">support@metaplaywallet.com</a>
                     </p>
                 </div>
             </div>

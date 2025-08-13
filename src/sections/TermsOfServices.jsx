@@ -143,7 +143,7 @@ const TermsOfUse = () => {
                     <p>
                         For any questions or concerns:
                         <br />
-                        📧 Email: <a href="mailto:support@metaplaywallet.com" className="text-blue-600 underline">support@metaplaywallet.com</a>
+                        Email: <a href="mailto:support@metaplaywallet.com" className="text-blue-600 underline">support@metaplaywallet.com</a>
                     </p>
                 </div>
             </div>

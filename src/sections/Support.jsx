@@ -76,8 +76,10 @@ const Support = () => {
                 <Typography textAlign="center" mt={5}>
                     Can't find what you're looking for?
 
-                    Send us a message,tweet at us <span className='text-blue-800'>@metaplaywalletdotme</span>,
-                    <br />  or email <span className='text-blue-800'>support@metaplaywallet.me</span> for further assistance.
+                    {/* Send us a message,tweet at us <span className='text-blue-800'>support@metaplaywallet.com</span>,
+                    <br />  or  */}
+
+                    email <span className='text-blue-800'>support@metaplaywallet.com</span> for further assistance.
                 </Typography>
             </Box>
         </Box>
