@@ -1,6 +1,9 @@
 import { Typography } from "@mui/material";
 import React from "react";
 import Marquee from "react-fast-marquee";
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
 
 const coinsRow1 = [
     { id: "bitcoin", name: "Bitcoin" },
@@ -61,6 +64,8 @@ function coinImgUrl(id) {
 }
 
 export default function CryptoMarquee() {
+    const matches = useMediaQuery('(min-width:600px)');
+
     const containerStyle = {
         display: "flex",
         flexDirection: "column",
@@ -69,12 +74,12 @@ export default function CryptoMarquee() {
         textAlign: "center",
         fontSize: "14px",
         minWidth: "100px",
-        margin: "20px",
+        margin: matches ? "20px" : "4px",
     };
 
     const imgStyle = {
-        width: 70,
-        height: 70,
+        width: matches ? 70 : 50,
+        height: matches ? 70 : 50,
         transition: "transform 0.3s ease",
     };
 
@@ -102,11 +107,14 @@ export default function CryptoMarquee() {
                 padding: "50px 0",
             }}
         >
-            <Typography variant="h4" fontWeight="600">
+            <Typography variant="h4" fontWeight="600" mb={matches ? 5 : 2}>
                 Trending Coins
             </Typography>
 
-            <Marquee pauseOnHover speed={40} gradient style={{ width: "85%" }}>
+            <Marquee pauseOnHover speed={40} gradient={matches}
+                style={{ width: matches ? "85%" : "100%" }}
+
+            >
                 {repeatCoins(coinsRow1).map(({ id, name }, index) => (
                     <div
                         key={`${id}-${index}`}
@@ -131,8 +139,8 @@ export default function CryptoMarquee() {
                 pauseOnHover
                 speed={40}
                 direction="right"
-                gradient
-                style={{ width: "85%" }}
+                gradient={matches}
+                style={{ width: matches ? "85%" : "100%" }}
             >
                 {repeatCoins(coinsRow2).map(({ id, name }, index) => (
                     <div
