@@ -14,20 +14,20 @@ import Marquee from "./sections/Marque";
 const App = () => {
   return (
     <div>
-      <MotionFadeIn delay={0.1}>
+      <MotionFadeIn delay={0}>
         <Hero />
       </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
+      <MotionFadeIn delay={0}>
         {/* <OverlapGroupWrapper /> */}
       </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
+      <MotionFadeIn delay={0}>
         <ZeroPersonal />
       </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
+      <MotionFadeIn delay={0}>
         {/* <FrameWrapper /> */}
         <Marquee />
       </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
+      <MotionFadeIn delay={0}>
         <DivWrapper />
       </MotionFadeIn>
     </div>
