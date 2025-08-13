@@ -18,14 +18,14 @@ const App = () => {
         <Hero />
       </MotionFadeIn>
       <MotionFadeIn delay={0.1}>
-        <OverlapGroupWrapper />
+        {/* <OverlapGroupWrapper /> */}
+      </MotionFadeIn>
+      <MotionFadeIn delay={0.1}>
+        <ZeroPersonal />
       </MotionFadeIn>
       <MotionFadeIn delay={0.1}>
         {/* <FrameWrapper /> */}
         <Marquee />
-      </MotionFadeIn>
-      <MotionFadeIn delay={0.1}>
-        <ZeroPersonal />
       </MotionFadeIn>
       <MotionFadeIn delay={0.1}>
         <DivWrapper />
