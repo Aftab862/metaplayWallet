@@ -6,10 +6,62 @@ import ImageCommunity from "../assets/home/Community.png";
 import ImageUserFriendly from "../assets/home/UserFriendly.png";
 import GenericButton from "../components/GenericButton";
 
+import groupMobile from "../assets/groupMobile.png";
+import Security from "../assets/home/Security.png";
+import Community from "../assets/home/Community.png"
+import Safety from "../assets/home/Safety.png"
+import Chain from "../assets/home/Chain.png"
+
+
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
+
+const items = [
+  {
+    title: "Security",
+    description: (
+      <>
+        Lorem Ipsum is simply dummy text <br />
+        Lorem Ipsum is simply dummy text{" "}
+      </>
+    ),
+    image: Security,
+  },
+  {
+    title: "Safety",
+    description: (
+      <>
+        Lorem Ipsum is simply dummy text <br />
+        Lorem Ipsum is simply dummy text{" "}
+      </>
+    ),
+    image: Safety,
+  },
+  {
+    title: "Community",
+    description: (
+      <>
+        Lorem Ipsum is simply dummy text <br />
+        Lorem Ipsum is simply dummy text{" "}
+      </>
+    ),
+    image: Community,
+  },
+
+  {
+    title: "Multi Chain",
+    description: (
+      <>
+        Lorem Ipsum is simply dummy text <br />
+        Lorem Ipsum is simply dummy text{" "}
+      </>
+    ),
+    image: Chain,
+  },
+];
 
 const ZeroPersonal = () => {
   return (
@@ -24,7 +76,7 @@ const ZeroPersonal = () => {
         <Box
           className="flex flex-col w-full max-w-7xl rounded-3xl shadow-[0px_4px_184px_#a9abb522] p-6 sm:p-10 md:p-16 px-6 sm:px-10 md:px-28 relative bg-opacity-30 backdrop-blur-xl"
           sx={{
-            background: { sm: "#f5f5f7", md: "#f5f5f7" },
+            background: { sm: "#cedeff", md: "#cedeff" },
           }}
         >
           {/* Main Title */}
@@ -39,7 +91,8 @@ const ZeroPersonal = () => {
               lineHeight: 1.2,
             }}
           >
-            Zero personal tracking
+            Why Choose
+            Metaplay Wallet?
           </Typography>
           <Typography
             align="center"
@@ -57,7 +110,7 @@ const ZeroPersonal = () => {
 
           {/* Top Section */}
           <motion.div variants={fadeInUp}>
-            <Card sx={{ borderRadius: 3, boxShadow: 3, mb: 6 }}>
+            <Card sx={{ borderRadius: 3, boxShadow: 0, mb: 6, background: "#cedeff" }}>
               <CardContent>
                 <Box
                   display="flex"
@@ -159,6 +212,7 @@ const ZeroPersonal = () => {
                   <Card
                     sx={{
                       borderRadius: 3,
+                      boxShadow: 0,
                       p: 5,
                       height: "100%",
                       display: "flex",
@@ -184,6 +238,57 @@ const ZeroPersonal = () => {
               </Grid>
             ))}
           </Grid>
+
+
+          <Grid container mt={6} spacing={1} justifyContent="center">
+            {items.map((item, index) => (
+              <Grid item xs={12} sm={6} md={3} lg={3} key={index}>
+                <motion.div
+                  variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  custom={index}
+                >
+                  <Box
+                    sx={{
+                      padding: 2,
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      textAlign: "center",
+                      backgroundColor: "transparent",
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      loading="lazy"
+                      src={item.image}
+                      alt={item.title}
+                      sx={{
+                        width: 100,
+                        height: 100,
+                        objectFit: "contain",
+                        marginBottom: 2,
+                      }}
+                    />
+                    <Typography variant="h6" gutterBottom>
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ lineHeight: "24px" }}
+                    >
+                      {item.description}
+                    </Typography>
+                  </Box>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+
         </Box>
       </motion.div>
     </Box>
