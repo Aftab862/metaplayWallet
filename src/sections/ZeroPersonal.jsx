@@ -24,7 +24,7 @@ const ZeroPersonal = () => {
         <Box
           className="flex flex-col w-full max-w-7xl rounded-3xl shadow-[0px_4px_184px_#a9abb522] p-6 sm:p-10 md:p-16 px-6 sm:px-10 md:px-28 relative bg-opacity-30 backdrop-blur-xl"
           sx={{
-            background: { sm: "transparent", md: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.6%,#f1f3f7)" },
+            background: { sm: "#f5f5f7", md: "#f5f5f7" },
           }}
         >
           {/* Main Title */}
@@ -64,12 +64,12 @@ const ZeroPersonal = () => {
                   flexDirection={{ xs: "column", sm: "row" }}
                   alignItems="center"
                   justifyContent="space-between"
-                  p={3}
+                  p={{ sm: 2, md: 3 }}
                   gap={3}
                 >
                   {/* Text Left */}
                   <Box
-                    p={3}
+                    p={{ sm: 2, md: 3 }}
                     sx={{
                       width: { xs: "100%", sm: "50%", md: "60%" },
                       textAlign: { xs: "center", sm: "left" },
