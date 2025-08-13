@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
@@ -7,11 +8,9 @@ const coinsRow1 = [
     { id: "binancecoin", name: "BNB" },
     { id: "cardano", name: "Cardano" },
     { id: "solana", name: "Solana" },
-    // { id: "xrp", name: "XRP" },
     { id: "dogecoin", name: "Dogecoin" },
     { id: "avalanche-2", name: "Avalanche" },
     { id: "tron", name: "TRON" },
-    // { id: "toncoin", name: "Toncoin" },
     { id: "monero", name: "Monero" },
     { id: "okb", name: "OKB" },
     { id: "cosmos", name: "Cosmos" },
@@ -47,7 +46,6 @@ const coinsRow2 = [
     { id: "neo", name: "NEO" },
     { id: "tezos", name: "Tezos" },
     { id: "decentraland", name: "Decentraland" },
-    // { id: "sandbox", name: "The Sandbox" },
     { id: "eos", name: "EOS" },
     { id: "theta-token", name: "Theta" },
     { id: "pancakeswap-token", name: "PancakeSwap" },
@@ -71,52 +69,87 @@ export default function CryptoMarquee() {
         textAlign: "center",
         fontSize: "14px",
         minWidth: "100px",
-        margin: " 25px"
+        margin: "20px",
     };
 
     const imgStyle = {
-        width: 80,
-        height: 80,
+        width: 70,
+        height: 70,
         transition: "transform 0.3s ease",
     };
 
-    const handleHover = (e) => (e.currentTarget.style.transform = "scale(1.2)");
-    const handleLeave = (e) => (e.currentTarget.style.transform = "scale(1)");
+    const handleHover = (e) => {
+        e.currentTarget.querySelector("img").style.transform = "scale(1.2)";
+        e.currentTarget.querySelector("span").style.transform = "scale(1.1)";
+    };
 
-    // Duplicate arrays to make sure marquee fills full width with no gaps
+    const handleLeave = (e) => {
+        e.currentTarget.querySelector("img").style.transform = "scale(1)";
+        e.currentTarget.querySelector("span").style.transform = "scale(1)";
+    };
+
     const repeatCoins = (coins, times = 4) =>
-        Array(times)
-            .fill(coins)
-            .flat();
+        Array(times).fill(coins).flat();
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "40px", width: "100%", padding: "50px 0" }}>
-            <Marquee pauseOnHover speed={30} style={{ width: "85%" }}>
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "40px",
+                width: "100%",
+                padding: "50px 0",
+            }}
+        >
+            <Typography variant="h4" fontWeight="600">
+                Trending Coins
+            </Typography>
+
+            <Marquee pauseOnHover speed={40} gradient style={{ width: "85%" }}>
                 {repeatCoins(coinsRow1).map(({ id, name }, index) => (
-                    <div key={`${id}-${index}`} style={containerStyle}>
-                        <img
-                            src={coinImgUrl(id)}
-                            alt={name}
-                            style={imgStyle}
-                            onMouseEnter={handleHover}
-                            onMouseLeave={handleLeave}
-                        />
-                        <span>{name}</span>
+                    <div
+                        key={`${id}-${index}`}
+                        style={containerStyle}
+                        onMouseEnter={handleHover}
+                        onMouseLeave={handleLeave}
+                    >
+                        <img src={coinImgUrl(id)} alt={name} style={imgStyle} />
+                        <span
+                            style={{
+                                transition: "transform 0.3s ease",
+                                fontWeight: 500,
+                            }}
+                        >
+                            {name}
+                        </span>
                     </div>
                 ))}
             </Marquee>
 
-            <Marquee pauseOnHover speed={30} direction="right" gradient style={{ width: "85%" }}>
+            <Marquee
+                pauseOnHover
+                speed={40}
+                direction="right"
+                gradient
+                style={{ width: "85%" }}
+            >
                 {repeatCoins(coinsRow2).map(({ id, name }, index) => (
-                    <div key={`${id}-${index}`} style={containerStyle}>
-                        <img
-                            src={coinImgUrl(id)}
-                            alt={name}
-                            style={imgStyle}
-                            onMouseEnter={handleHover}
-                            onMouseLeave={handleLeave}
-                        />
-                        <span>{name}</span>
+                    <div
+                        key={`${id}-${index}`}
+                        style={containerStyle}
+                        onMouseEnter={handleHover}
+                        onMouseLeave={handleLeave}
+                    >
+                        <img src={coinImgUrl(id)} alt={name} style={imgStyle} />
+                        <span
+                            style={{
+                                transition: "transform 0.3s ease",
+                                fontWeight: 500,
+                            }}
+                        >
+                            {name}
+                        </span>
                     </div>
                 ))}
             </Marquee>
