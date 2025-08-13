@@ -52,8 +52,8 @@ const footerLinks = [
     {
         title: "Support",
         links: [
-            { id: 9, name: "FAQ", url: "#" },
-            { id: 10, name: "Contact Us", url: "#" },
+            { id: 9, name: "FAQ", url: "/support" },
+            { id: 10, name: "Contact Us", url: "/support" },
         ],
     },
     {
@@ -225,14 +225,14 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    {/* <Grid item size={{ xs: 12, md: 5, }}>
-                        <Typography mt={{ xs: 1, md: 3 }} fontWeight="bold" className="text-center md:text-start" variant='h6'>Stay Connected:</Typography>
+                    <Grid item size={{ xs: 12, md: 5, }} gap={2}>
+                        <Typography mt={{ xs: 1, md: 3 }} fontWeight="bold" className="text-center md:center" variant='h6'>Stay Connected:</Typography>
                         <Box
                             display="flex"
                             flexWrap="wrap"
                             gap={2}
                             height="100%"
-                            justifyContent={{ xs: "center", md: "start" }}
+                            justifyContent={{ xs: "center", md: "center" }}
                             mt={{ xs: 2, md: 2 }}
                         >
                             {socialIcons.map((item, idx) => (
@@ -266,7 +266,7 @@ const Footer = () => {
                             ))}
                         </Box>
 
-                    </Grid> */}
+                    </Grid>
                 </Grid>
 
 
