@@ -225,15 +225,32 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item size={{ xs: 12, md: 5, }} gap={2}>
-                        <Typography mt={{ xs: 1, md: 3 }} fontWeight="bold" className="text-center md:center" variant='h6'>Stay Connected:</Typography>
+                    <Grid
+                        item
+                        size={{ xs: 12, md: 4 }}
+                        gap={2}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center", // Center horizontally
+                            justifyContent: "flex-end", // Push to bottom
+                        }}
+                    >
+                        <Typography
+                            fontWeight="bold"
+                            textAlign="center"
+                            variant="h6"
+
+                        >
+                            Stay Connected:
+                        </Typography>
+
                         <Box
                             display="flex"
                             flexWrap="wrap"
                             gap={2}
-                            height="100%"
-                            justifyContent={{ xs: "center", md: "center" }}
-                            mt={{ xs: 2, md: 2 }}
+                            justifyContent="center"
+
                         >
                             {socialIcons.map((item, idx) => (
                                 <Box
@@ -242,7 +259,6 @@ const Footer = () => {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-
                                     sx={{
                                         bgcolor: "#1976d2",
                                         color: "#fff",
@@ -257,16 +273,16 @@ const Footer = () => {
                                         transition: "all 0.3s ease",
                                         "&:hover": {
                                             bgcolor: "#1976d2",
-                                            transform: "scale(1.1)"
-                                        }
+                                            transform: "scale(1.1)",
+                                        },
                                     }}
                                 >
                                     {item.icon}
                                 </Box>
                             ))}
                         </Box>
-
                     </Grid>
+
                 </Grid>
 
 
