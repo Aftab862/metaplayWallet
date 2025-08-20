@@ -45,7 +45,7 @@ const buttonVariant = {
     }),
 };
 
-export const DivWrapper = () => {
+const DivWrapper = () => {
     return (
         <Box className="w-full flex justify-center px-4 py-10">
             <motion.div
@@ -139,3 +139,4 @@ export const DivWrapper = () => {
         </Box>
     );
 };
+export default DivWrapper;
