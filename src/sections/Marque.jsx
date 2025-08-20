@@ -4,64 +4,50 @@ import Marquee from "react-fast-marquee";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 
-
 const coinsRow1 = [
-    { id: "bitcoin", name: "Bitcoin" },
-    { id: "ethereum", name: "Ethereum" },
-    { id: "binancecoin", name: "BNB" },
-    { id: "cardano", name: "Cardano" },
-    { id: "solana", name: "Solana" },
-    { id: "dogecoin", name: "Dogecoin" },
-    { id: "avalanche-2", name: "Avalanche" },
-    { id: "tron", name: "TRON" },
-    { id: "monero", name: "Monero" },
-    { id: "okb", name: "OKB" },
-    { id: "cosmos", name: "Cosmos" },
-    { id: "internet-computer", name: "ICP" },
-    { id: "ethereum-classic", name: "Ethereum Classic" },
-    { id: "aptos", name: "Aptos" },
-    { id: "lido-dao", name: "Lido DAO" },
-    { id: "hedera-hashgraph", name: "Hedera" },
-    { id: "arbitrum", name: "Arbitrum" },
-    { id: "vechain", name: "VeChain" },
-    { id: "the-graph", name: "The Graph" },
+    { id: "btc", name: "Bitcoin" },
+    { id: "eth", name: "Ethereum" },
+    { id: "bnb", name: "BNB" },
+    { id: "ada", name: "Cardano" },
+    { id: "sol", name: "Solana" },
+    { id: "doge", name: "Dogecoin" },
+    { id: "avax", name: "Avalanche" },
+    { id: "trx", name: "TRON" },
+    { id: "xmr", name: "Monero" },
+    { id: "atom", name: "Cosmos" },
+    { id: "icp", name: "ICP" },
+    { id: "etc", name: "Ethereum Classic" },
+    { id: "vet", name: "VeChain" },
+    { id: "grt", name: "The Graph" },
     { id: "aave", name: "Aave" },
-    { id: "flow", name: "Flow" },
-    { id: "frax", name: "Frax" },
-    { id: "quant-network", name: "Quant" },
+    { id: "qnt", name: "Quant" },
 ];
 
 const coinsRow2 = [
-    { id: "polkadot", name: "Polkadot" },
-    { id: "litecoin", name: "Litecoin" },
-    { id: "chainlink", name: "Chainlink" },
-    { id: "stellar", name: "Stellar" },
-    { id: "matic-network", name: "Polygon" },
+    { id: "dot", name: "Polkadot" },
+    { id: "ltc", name: "Litecoin" },
+    { id: "link", name: "Chainlink" },
+    { id: "xlm", name: "Stellar" },
+    { id: "matic", name: "Polygon" },
     { id: "dai", name: "DAI" },
-    { id: "maker", name: "Maker" },
-    { id: "filecoin", name: "Filecoin" },
-    { id: "algorand", name: "Algorand" },
-    { id: "uniswap", name: "Uniswap" },
-    { id: "near", name: "NEAR" },
-    { id: "elrond-erd-2", name: "MultiversX" },
-    { id: "iota", name: "IOTA" },
-    { id: "fantom", name: "Fantom" },
+    { id: "mkr", name: "Maker" },
+    { id: "fil", name: "Filecoin" },
+    { id: "algo", name: "Algorand" },
+    { id: "uni", name: "Uniswap" },
+    { id: "miota", name: "IOTA" },
     { id: "neo", name: "NEO" },
-    { id: "tezos", name: "Tezos" },
-    { id: "decentraland", name: "Decentraland" },
+    { id: "xtz", name: "Tezos" },
+    { id: "mana", name: "Decentraland" },
     { id: "eos", name: "EOS" },
-    { id: "theta-token", name: "Theta" },
-    { id: "pancakeswap-token", name: "PancakeSwap" },
-    { id: "zcash", name: "Zcash" },
-    { id: "curve-dao-token", name: "Curve DAO" },
-    { id: "kava", name: "Kava" },
-    { id: "optimism", name: "Optimism" },
+    { id: "theta", name: "Theta" },
+    { id: "zec", name: "Zcash" },
+    { id: "crv", name: "Curve DAO" },
 ];
 
-
 function coinImgUrl(id) {
-    return `https://cdn.jsdelivr.net/gh/simplr-sh/coin-logos/images/${id}/small.png`;
+    return `https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color/${id}.svg`;
 }
+
 
 export default function CryptoMarquee() {
     const matches = useMediaQuery('(min-width:600px)');
