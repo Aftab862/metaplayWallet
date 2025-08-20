@@ -10,7 +10,7 @@ import {
     Stack,
     Divider,
 } from "@mui/material";
-import { AppleIcon, ChromeIcon, FacebookIcon, GithubIcon, InstagramIcon, Linkedin, TwitterIcon, YoutubeIcon } from 'lucide-react';
+import { BsArrowUpRight, BsDiscord, BsInstagram, BsTelegram, BsTwitter } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 // import {
 //     Apple,
@@ -25,6 +25,9 @@ import { useNavigate } from 'react-router-dom';
 //     Twitter,
 //     Globe
 // } from "lucide-react";
+
+
+
 const footerLinks = [
 
     {
@@ -69,14 +72,15 @@ const footerLinks = [
 ];
 
 
+
+
+
 const socialIcons = [
-    // { icon: <Linkedin />, link: "https://linkedin.com" },
-    // { icon: <FacebookIcon />, link: "https://facebook.com" },
-    // { icon: <GithubIcon />, link: "https://github.com" },
-    { icon: <InstagramIcon />, link: "https://www.instagram.com/metaplayw/" },
-    { icon: <TwitterIcon />, link: "https://x.com/MetaplayW" },
-    // { icon: <YoutubeIcon />, link: "https://youtube.com" },
-];
+    { id: 1, icon: <BsTwitter size={25} fill="#1976d2" />, link: "https://x.com/MetaplayW" },
+    { id: 2, icon: <BsInstagram size={25} fill="#1976d2" />, link: "https://instagram.com/metaplayw/" },
+    { id: 3, icon: <BsDiscord size={25} fill="#1976d2" />, link: "https://discord.gg/ABgrw2rp" },
+    { id: 4, icon: <BsTelegram size={25} fill="#1976d2" />, link: "https://t.me/+rkJT_zZr1ytjNWI0" }
+]
 
 // Real image URLs
 const iosIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg";
@@ -254,14 +258,12 @@ const Footer = () => {
                         >
                             {socialIcons.map((item, idx) => (
                                 <Box
-                                    key={idx}
+                                    key={item.id}
                                     component="a"
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     sx={{
-                                        bgcolor: "#1976d2",
-                                        color: "#fff",
                                         p: 1,
                                         borderRadius: "6px",
                                         display: "flex",
@@ -272,8 +274,8 @@ const Footer = () => {
                                         textDecoration: "none",
                                         transition: "all 0.3s ease",
                                         "&:hover": {
-                                            bgcolor: "#1976d2",
                                             transform: "scale(1.1)",
+
                                         },
                                     }}
                                 >
