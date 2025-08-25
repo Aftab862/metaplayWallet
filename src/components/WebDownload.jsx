@@ -11,11 +11,12 @@ const browsers = [
 ];
 
 
-const WebDownload = () => {
+const WebDownload = ({ handleClick }) => {
     return (
         <div>
             <Box className="w-full flex items-center justify-center px-4 py-4 md:py-16">
                 <Box
+
                     sx={{
                         background: "radial-gradient(100% 100% at 50% 100%,#a1cbfd,#e0e5ff 32.64734820868138%,#f1f3f7)"
                     }}
@@ -40,6 +41,7 @@ const WebDownload = () => {
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 flex-1">
                                 {browsers.map((browser) => (
                                     <div
+                                        onClick={() => handleClick()}
                                         key={browser.name}
                                         className="p-6 rounded-2xl bg-white bg-opacity-60 shadow-lg backdrop-blur-md flex flex-col items-center transition-transform transform hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
                                     >

@@ -160,7 +160,7 @@ const Footer = () => {
                         <Box display="flex" flexDirection="column"  >
                             <Box mt={4} className="text-center md:text-start">
                                 <Typography variant="subtitle2" fontWeight="bold" >
-                                    Download Trust Wallet
+                                    Download Meta Play Wallet
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" mb={2}>
                                     The most trusted & secure crypto wallet.
