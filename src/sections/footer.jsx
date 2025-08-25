@@ -246,13 +246,13 @@ const Footer = () => {
                             variant="h6"
 
                         >
-                            Stay Connected:
+                            Stay Connected
                         </Typography>
 
                         <Box
                             display="flex"
                             flexWrap="wrap"
-                            gap={2}
+                            gap={1}
                             justifyContent="center"
 
                         >

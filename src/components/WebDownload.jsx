@@ -8,6 +8,7 @@ const browsers = [
     // { name: "Brave", icon: "https://framerusercontent.com/images/OuvIXHo4EADe0rsFyUhyDPCwo.svg" },
     // { name: "Firefox", icon: "https://framerusercontent.com/images/9Zo7RiErLwZv8ZsQr64bM8cK8s.svg" },
     // { name: "Arc", icon: "https://framerusercontent.com/images/nFhDQ3PlcARouqwLahKLRoWY.svg" },
+    // 
 ];
 
 
