@@ -82,7 +82,7 @@ const Navbar = () => {
                         }}
                         className="flex items-center gap-2"
                     >
-                        <img src={logo} alt="Trust Wallet Logo" className="w-40 object-contain" />
+                        <img src={logo} alt="Meta Play Wallet Logo" className="w-40 object-contain" />
                     </button>
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 
-const MobileDownload = () => {
+const MobileDownload = ({ handleClick }) => {
     const mobile = [
         {
             name: "Android",
@@ -21,7 +21,9 @@ const MobileDownload = () => {
                 }}
                 className="flex flex-col w-full max-w-7xl rounded-3xl shadow-[0px_4px_184px_#a9abb522] p-6 sm:p-10 md:p-16 relative bg-opacity-30 backdrop-blur-xl"
             >
-                <Box className="flex flex-col-reverse md:flex-row items-center gap-10">
+                <Box
+
+                    className="flex flex-col-reverse md:flex-row items-center gap-10">
                     {/* Image Section */}
                     <Box>
                         <Box
@@ -63,6 +65,7 @@ const MobileDownload = () => {
                         >
                             {mobile.map((browser) => (
                                 <Box
+                                    onClick={() => handleClick()}
                                     key={browser.name}
                                     className="px-8 py-6 rounded-3xl text-center bg-white bg-opacity-60 shadow-lg backdrop-blur-md flex flex-col items-center transition-transform transform hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
                                 >
