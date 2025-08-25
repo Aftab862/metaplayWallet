@@ -3,11 +3,11 @@ import { Box, Stack, Typography } from '@mui/material'
 
 const browsers = [
     { name: "Chrome", icon: "https://framerusercontent.com/images/Pf1EZTXzWCe0w0tmswGkGtoSw.svg" },
-    { name: "Edge", icon: "https://framerusercontent.com/images/x91ziV5jYh8ZIVnHY57NdsZFfs.svg" },
-    { name: "Safari", icon: "https://framerusercontent.com/images/RJPRLFUXOhdkiGk6IRZ2QUCN4.svg" },
-    { name: "Brave", icon: "https://framerusercontent.com/images/OuvIXHo4EADe0rsFyUhyDPCwo.svg" },
-    { name: "Firefox", icon: "https://framerusercontent.com/images/9Zo7RiErLwZv8ZsQr64bM8cK8s.svg" },
-    { name: "Arc", icon: "https://framerusercontent.com/images/nFhDQ3PlcARouqwLahKLRoWY.svg" },
+    // { name: "Edge", icon: "https://framerusercontent.com/images/x91ziV5jYh8ZIVnHY57NdsZFfs.svg" },
+    // { name: "Safari", icon: "https://framerusercontent.com/images/RJPRLFUXOhdkiGk6IRZ2QUCN4.svg" },
+    // { name: "Brave", icon: "https://framerusercontent.com/images/OuvIXHo4EADe0rsFyUhyDPCwo.svg" },
+    // { name: "Firefox", icon: "https://framerusercontent.com/images/9Zo7RiErLwZv8ZsQr64bM8cK8s.svg" },
+    // { name: "Arc", icon: "https://framerusercontent.com/images/nFhDQ3PlcARouqwLahKLRoWY.svg" },
 ];
 
 
@@ -34,16 +34,16 @@ const WebDownload = ({ handleClick }) => {
                                     mb: 8,
                                 }}
                             >
-                                Download for
+                                Install Browser
                                 <br />
-                                Desktop
+                                Extension
                             </Typography>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 flex-1">
+                            <div className=" flex justify-center">
                                 {browsers.map((browser) => (
                                     <div
                                         onClick={() => handleClick()}
                                         key={browser.name}
-                                        className="p-6 rounded-2xl bg-white bg-opacity-60 shadow-lg backdrop-blur-md flex flex-col items-center transition-transform transform hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
+                                        className="p-6 w-[200px] rounded-2xl bg-white bg-opacity-60 shadow-lg backdrop-blur-md flex flex-col items-center transition-transform transform hover:-translate-y-2 hover:shadow-2xl border border-gray-100"
                                     >
                                         <img src={browser.icon} alt=""
                                             className="w-[50px] md:w-[70px]  h-[50px] md:h-[70px]"
