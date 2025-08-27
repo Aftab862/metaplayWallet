@@ -92,9 +92,9 @@ const Calculator = () => {
                     />
 
                     {[
-                        { label: "3 Months Earning", value: "+ 0.0617 AXL" },
-                        { label: "06 Months Earning", value: "+ 0.0617 AXL" },
-                        { label: "Yearly Earning", value: "+ 0.0617 AXL" },
+                        { label: "3 Months Earning", value: "+ 0.0617 VRCN" },
+                        { label: "06 Months Earning", value: "+ 0.0617 VRCN" },
+                        { label: "Yearly Earning", value: "+ 0.0617 VRCN" },
                     ].map((item, idx) => (
                         <Box
                             key={idx}
