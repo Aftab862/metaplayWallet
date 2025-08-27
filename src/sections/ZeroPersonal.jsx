@@ -24,8 +24,8 @@ const items = [
     title: "Security",
     description: (
       <>
-        Lorem Ipsum is simply dummy text <br />
-        Lorem Ipsum is simply dummy text{" "}
+        Your assets and data are protected with advanced encryption and blockchain-level security, ensuring complete peace of mind.
+
       </>
     ),
     image: Security,
@@ -34,8 +34,7 @@ const items = [
     title: "Safety",
     description: (
       <>
-        Lorem Ipsum is simply dummy text <br />
-        Lorem Ipsum is simply dummy text{" "}
+        We prioritize user safety through strict authentication protocols, fraud prevention mechanisms, and secure access controls.
       </>
     ),
     image: Safety,
@@ -44,8 +43,7 @@ const items = [
     title: "Community",
     description: (
       <>
-        Lorem Ipsum is simply dummy text <br />
-        Lorem Ipsum is simply dummy text{" "}
+        A strong and growing community of users, developers, and partners working together to drive innovation and support each other.
       </>
     ),
     image: Community,
@@ -55,8 +53,7 @@ const items = [
     title: "Multi Chain",
     description: (
       <>
-        Lorem Ipsum is simply dummy text <br />
-        Lorem Ipsum is simply dummy text{" "}
+        Seamlessly connect across multiple blockchains, enabling interoperability, faster transactions, and a broader ecosystem reach.
       </>
     ),
     image: Chain,
@@ -242,7 +239,7 @@ const ZeroPersonal = () => {
 
           <Grid container mt={{ sm: 4, md: 10 }} spacing={1} justifyContent="center">
             {items.map((item, index) => (
-              <Grid item xs={12} sm={6} md={3} lg={3} key={index}>
+              <Grid item size={{ xs: 12, sm: 6, md: 3, lg: 3 }} key={index}>
                 <motion.div
                   variants={fadeInUp}
                   initial="hidden"
