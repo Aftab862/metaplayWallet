@@ -38,8 +38,8 @@ const Download = () => {
                 </Snackbar>
             ))}
 
-            <WebDownload handleClick={handleClick} />
             <MobileDownload handleClick={handleClick} />
+            <WebDownload handleClick={handleClick} />
         </>
     );
 };
