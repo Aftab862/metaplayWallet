@@ -41,7 +41,7 @@ const navItems = [
         label: "Features",
         submenu: [
             { id: 21, name: "Staking", url: "/staking" },
-            { id: 22, name: "Launchpad", url: "#" },
+            { id: 22, name: "Launchpad", url: "/download" },
             { id: 23, name: "Dapps", url: "/download" },
         ],
     },

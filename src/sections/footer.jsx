@@ -62,7 +62,7 @@ const footerLinks = [
     {
         title: "About",
         links: [
-            { id: 11, name: "About Us", url: "#" },
+            // { id: 11, name: "About Us", url: "#" },
             { id: 12, name: "Terms of Use", url: "/terms-of-use" },
             { id: 13, name: "Privacy Policy", url: "/privacy-policy" },
             // { id: 14, name: "Cookie Preferences", url: "#" },
