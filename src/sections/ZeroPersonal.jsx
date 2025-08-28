@@ -276,6 +276,7 @@ const ZeroPersonal = () => {
                     <Typography
                       variant="body2"
                       color="text.secondary"
+                      textAlign="justify"
                       sx={{ lineHeight: "24px" }}
                     >
                       {item.description}
