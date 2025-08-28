@@ -58,7 +58,7 @@ const Calculator = () => {
                 num3 = daily * MetaPlay12Months;
             }
 
-            setCalculatedValues([num1.toFixed(0), num2.toFixed(0), num3.toFixed(0)]);
+            setCalculatedValues([num1.toFixed(2), num2.toFixed(2), num3.toFixed(2)]);
         } else {
             setCalculatedValues([0, 0, 0]);
         }
