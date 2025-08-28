@@ -191,7 +191,7 @@ const PrivacyPolicy = () => {
                     </p>
                     <p>
                         For questions or concerns related to this Privacy Policy, contact us at:
-                        <br /> Email: <a href="mailto:support@metaplaywallet.com" className="text-blue-600 underline">support@metaplaywallet.com</a>
+                        <br /> Email: <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline">support@metaplaywallet.org</a>
                     </p>
                 </div>
             </div>
