@@ -75,7 +75,7 @@ const Support = () => {
 
                 <Typography textAlign="center" mt={5}>
                     Can't find what you're looking for?
-                    Email : <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline me-1">support@metaplaywallet.org</a>
+                    Email us at  : <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline me-1">support@metaplaywallet.org</a>
                     for any assistance.
                 </Typography>
             </Box>
