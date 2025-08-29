@@ -6,10 +6,9 @@ import ImageCommunity from "../assets/home/Community.png";
 import ImageUserFriendly from "../assets/home/UserFriendly.png";
 import GenericButton from "../components/GenericButton";
 
-import groupMobile from "../assets/groupMobile.png";
 import Security from "../assets/home/Security.png";
 import Community from "../assets/home/Community.png"
-import Safety from "../assets/home/Safety.png"
+import Safety from "../assets/home/Safety .png"
 import Chain from "../assets/home/Chain.png"
 
 
@@ -276,7 +275,7 @@ const ZeroPersonal = () => {
                     <Typography
                       variant="body2"
                       color="text.secondary"
-                      textAlign="justify"
+                      textAlign="start"
                       sx={{ lineHeight: "24px" }}
                     >
                       {item.description}
