@@ -141,9 +141,8 @@ const TermsOfUse = () => {
 
                     <h2 id="contact" className="font-bold">12. Contact Us</h2>
                     <p>
-                        For any questions or concerns:
-                        <br />
-                        Email: <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline">support@metaplaywallet.org</a>
+                        If you have questions or concerns
+                        Email at : <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline">support@metaplaywallet.org</a>
                     </p>
                 </div>
             </div>

@@ -190,8 +190,8 @@ const PrivacyPolicy = () => {
                         access to Web3 while respecting your privacy at every step.
                     </p>
                     <p>
-                        For questions or concerns related to this Privacy Policy, contact us at:
-                        <br /> Email: <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline">support@metaplaywallet.org</a>
+                        If you have questions or concerns
+                        Email at : <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline">support@metaplaywallet.org</a>
                     </p>
                 </div>
             </div>
