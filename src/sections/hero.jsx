@@ -1,9 +1,7 @@
 import React from 'react';
 import { Box, Grid, Typography, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
-
 import wallet from '../assets/wallet.png';
-import subtract1 from '../assets/subtract-1.png';
 import Group from '../assets/home/Group.png';
 import { ArrowUp } from 'lucide-react';
 
