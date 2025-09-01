@@ -1,8 +1,12 @@
 import './App.css'
-import Hero from './sections/hero'
-import ZeroPersonal from './sections/ZeroPersonal'
-import CryptoMarquee from './sections/Marque'
-import DivWrapper from './sections/DivWrapper'
+import React from "react";
+import { Suspense, lazy } from "react";
+
+const Hero = lazy(() => import("./sections/hero"));
+const ZeroPersonal = lazy(() => import("./sections/ZeroPersonal"));
+const CryptoMarquee = lazy(() => import("./sections/Marque"));
+const DivWrapper = lazy(() => import("./sections/DivWrapper"));
+
 
 function App() {
 
