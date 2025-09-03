@@ -83,7 +83,7 @@ const Stacking = () => {
                 <Box
                     component="img"
                     src={cryptoImages}
-                    width={1000}
+                    // width={1300}
                     className='my-2 md:my-10'
 
                 />
