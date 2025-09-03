@@ -6,7 +6,7 @@ import cryptoImages from "../assets/crypto.png"
 import Calculator from '../components/Caculator';
 import GenericButton from '../components/GenericButton';
 import { useNavigate } from 'react-router-dom';
-
+import Staking from '../assets/staking.png'
 
 
 const Stacking = () => {
@@ -66,8 +66,7 @@ const Stacking = () => {
                         <Box
                             component="img"
                             className='hidden md:flex'
-                            src='https://framerusercontent.com/images/WB7cWZkCOhrZwymgwc1ZSbxVHw.png'
-                            // src="https://framerusercontent.com/images/ojR9drUQuF1ZfjCgBAEzJnQE.png?scale-down-to=1024"
+                            src={Staking}
                             alt="Download Devices"
                             sx={{
                                 maxWidth: "100%",
