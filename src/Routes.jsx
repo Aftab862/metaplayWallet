@@ -13,7 +13,7 @@ const PrivacyPolicyPage = lazy(() => import("./sections/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./sections/TermsOfServices"));
 const Stacking = lazy(() => import("./sections/Stacking"));
 const CookieNotice = lazy(() => import("./sections/CookieNotice"));
-
+//
 const AppRoutes = () => {
     const { pathname: parms } = useLocation();
     console.log("current page", parms);
