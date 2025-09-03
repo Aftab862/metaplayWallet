@@ -16,11 +16,11 @@ const faqs = [
     },
     {
         question: "What’s the difference between staking, lending, and yield farming?",
-        answer: "Staking involves locking up your cryptocurrency on-chain to help secure and operate a blockchain network, earning you rewards for your participation. Lending is the act of loaning your cryptocurrency, either on-chain or off-chain, to earn interest. Yield farming is a more complex, on-chain activity where you provide liquidity in decentralized finance protocols to potentially earn yield. With Trust Wallet you can stake without leaving the wallet. You can also also connect any Web3 dApp that offers earning opportunities such as lending, borrowing, and yield farming protocols.",
+        answer: "Staking involves locking up your cryptocurrency on-chain to help secure and operate a blockchain network, earning you rewards for your participation. Lending is the act of loaning your cryptocurrency, either on-chain or off-chain, to earn interest. Yield farming is a more complex, on-chain activity where you provide liquidity in decentralized finance protocols to potentially earn yield. With MetaPlay Wallet you can stake without leaving the wallet. You can also also connect any Web3 dApp that offers earning opportunities such as lending, borrowing, and yield farming protocols.",
     },
     {
         question: "What are the risks involved?",
-        answer: "While using Trust Wallet, you're interacting directly with decentralized protocols, whether you decide to use in-wallet earn options or earn opportunities via Web3 dApps. Risks may include smart contract vulnerabilities, market volatility or other factors. Trust Wallet is an interface to these services and doesn't control the underlying protocols. It's important to conduct your own research before staking with any protocol.",
+        answer: "While using MetaPlay Wallet, you're interacting directly with decentralized protocols, whether you decide to use in-wallet earn options or earn opportunities via Web3 dApps. Risks may include smart contract vulnerabilities, market volatility or other factors. MetaPlay Wallet is an interface to these services and doesn't control the underlying protocols. It's important to conduct your own research before staking with any protocol.",
     },
 ];
 

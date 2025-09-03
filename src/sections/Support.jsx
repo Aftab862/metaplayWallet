@@ -8,7 +8,7 @@ const Support = () => {
             description: 'All the essentials you’ll need as you begin your metaplaywallet journey',
         },
         {
-            title: 'iOS & Android',
+            title: 'IOS & Android',
             description: 'Guides and FAQ to help you use the metaplaywallet app and navigate the new world of Web3 and Ethereum',
         },
         {
@@ -74,10 +74,9 @@ const Support = () => {
 
 
                 <Typography textAlign="center" mt={5}>
-                    Can't find what you're looking for?
+                    If you have any questions or concerns Email
+                    at   <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline me-1">support@metaplaywallet.org</a>
 
-                    Send us a message,tweet at us <span className='text-blue-800'>@metaplaywalletdotme</span>,
-                    <br />  or email <span className='text-blue-800'>support@metaplaywallet.me</span> for further assistance.
                 </Typography>
             </Box>
         </Box>

@@ -41,8 +41,8 @@ const navItems = [
         label: "Features",
         submenu: [
             { id: 21, name: "Staking", url: "/staking" },
-            { id: 22, name: "Launchpad", url: "#" },
-            { id: 23, name: "Swap", url: "#" },
+            { id: 22, name: "Launchpad", url: "/download" },
+            { id: 23, name: "Dapps", url: "/download" },
         ],
     },
     {
@@ -82,7 +82,7 @@ const Navbar = () => {
                         }}
                         className="flex items-center gap-2"
                     >
-                        <img src={logo} alt="Trust Wallet Logo" className="w-40 object-contain" />
+                        <img src={logo} alt="MetaPlay Wallet Logo" className="w-40 object-contain" />
                     </button>
 
 

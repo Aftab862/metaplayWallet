@@ -4,9 +4,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const MotionFadeIn = ({ children, delay = 0.2, duration = 0.6, y = 50 }) => {
+const MotionFadeIn = ({ children, delay = 0, duration = 0, y = 50 }) => {
     const controls = useAnimation();
-    const [ref, inView] = useInView({ triggeronce: false, threshold: 0.1 });
+    const [ref, inView] = useInView({ triggeronce: true, });
 
     useEffect(() => {
         if (inView) {

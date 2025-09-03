@@ -72,9 +72,10 @@ const CookieNotice = () => {
                     </p>
 
                     <h2 id="contact" className="font-bold ">6. Contact Us</h2>
+
                     <p>
-                        If you have questions or concerns about this Cookie Notice, please contact:<br />
-                        📧 <a href="mailto:support@metaplaywallet.com" className="text-blue-600 underline">support@metaplaywallet.com</a>
+                        If you have any questions or concerns Email us
+                        at <a href="mailto:support@metaplaywallet.org" className="text-blue-600 underline">support@metaplaywallet.org</a>
                     </p>
                 </div>
             </div>

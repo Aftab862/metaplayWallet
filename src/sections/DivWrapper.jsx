@@ -45,7 +45,7 @@ const buttonVariant = {
     }),
 };
 
-export const DivWrapper = () => {
+const DivWrapper = () => {
     return (
         <Box className="w-full flex justify-center px-4 py-10">
             <motion.div
@@ -110,7 +110,7 @@ export const DivWrapper = () => {
                                     variants={buttonVariant}
                                     initial="hidden"
                                     whileInView="visible"
-                                    viewport={{ once: false, amount: 0.3 }}
+                                    viewport={{ once: true, amount: 0.3 }}
                                 />
                             ))}
                         </Stack>
@@ -124,7 +124,7 @@ export const DivWrapper = () => {
                             variants={imageVariant}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: false, amount: 0.4 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             style={{
                                 maxWidth: "100%",
                                 width: "100%",
@@ -139,3 +139,4 @@ export const DivWrapper = () => {
         </Box>
     );
 };
+export default DivWrapper;

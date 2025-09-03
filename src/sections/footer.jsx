@@ -10,7 +10,7 @@ import {
     Stack,
     Divider,
 } from "@mui/material";
-import { AppleIcon, ChromeIcon, FacebookIcon, GithubIcon, InstagramIcon, Linkedin, TwitterIcon, YoutubeIcon } from 'lucide-react';
+import { BsArrowUpRight, BsDiscord, BsInstagram, BsTelegram, BsTwitter } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 // import {
 //     Apple,
@@ -25,6 +25,9 @@ import { useNavigate } from 'react-router-dom';
 //     Twitter,
 //     Globe
 // } from "lucide-react";
+
+
+
 const footerLinks = [
 
     {
@@ -52,14 +55,14 @@ const footerLinks = [
     {
         title: "Support",
         links: [
-            { id: 9, name: "FAQ", url: "#" },
-            { id: 10, name: "Contact Us", url: "#" },
+            { id: 9, name: "FAQ", url: "/support" },
+            { id: 10, name: "Contact Us", url: "/support" },
         ],
     },
     {
         title: "About",
         links: [
-            { id: 11, name: "About Us", url: "#" },
+            // { id: 11, name: "About Us", url: "#" },
             { id: 12, name: "Terms of Use", url: "/terms-of-use" },
             { id: 13, name: "Privacy Policy", url: "/privacy-policy" },
             // { id: 14, name: "Cookie Preferences", url: "#" },
@@ -69,14 +72,15 @@ const footerLinks = [
 ];
 
 
+
+
+
 const socialIcons = [
-    // { icon: <Linkedin />, link: "https://linkedin.com" },
-    // { icon: <FacebookIcon />, link: "https://facebook.com" },
-    // { icon: <GithubIcon />, link: "https://github.com" },
-    { icon: <InstagramIcon />, link: "https://www.instagram.com/metaplayw/" },
-    { icon: <TwitterIcon />, link: "https://x.com/MetaplayW" },
-    // { icon: <YoutubeIcon />, link: "https://youtube.com" },
-];
+    { id: 1, icon: <BsTwitter size={25} fill="#1976d2" />, link: "https://x.com/MetaplayW" },
+    { id: 2, icon: <BsInstagram size={25} fill="#1976d2" />, link: "https://instagram.com/metaplayw/" },
+    { id: 3, icon: <BsDiscord size={25} fill="#1976d2" />, link: "https://discord.gg/ABgrw2rp" },
+    { id: 4, icon: <BsTelegram size={25} fill="#1976d2" />, link: "https://t.me/+rkJT_zZr1ytjNWI0" }
+]
 
 // Real image URLs
 const iosIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg";
@@ -156,7 +160,7 @@ const Footer = () => {
                         <Box display="flex" flexDirection="column"  >
                             <Box mt={4} className="text-center md:text-start">
                                 <Typography variant="subtitle2" fontWeight="bold" >
-                                    Download Trust Wallet
+                                    Download MetaPlay Wallet
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" mb={2}>
                                     The most trusted & secure crypto wallet.
@@ -225,27 +229,41 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    <Grid item size={{ xs: 12, md: 5, }}>
-                        <Typography mt={{ xs: 1, md: 3 }} fontWeight="bold" className="text-center md:text-start" variant='h6'>Stay Connected:</Typography>
+                    <Grid
+                        item
+                        size={{ xs: 12, md: 4 }}
+                        gap={2}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center", // Center horizontally
+                            justifyContent: "flex-end", // Push to bottom
+                        }}
+                    >
+                        <Typography
+                            fontWeight="bold"
+                            textAlign="center"
+                            variant="h6"
+
+                        >
+                            Stay Connected
+                        </Typography>
+
                         <Box
                             display="flex"
                             flexWrap="wrap"
-                            gap={2}
-                            height="100%"
-                            justifyContent={{ xs: "center", md: "start" }}
-                            mt={{ xs: 2, md: 2 }}
+                            gap={1}
+                            justifyContent="center"
+
                         >
                             {socialIcons.map((item, idx) => (
                                 <Box
-                                    key={idx}
+                                    key={item.id}
                                     component="a"
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-
                                     sx={{
-                                        bgcolor: "#1976d2",
-                                        color: "#fff",
                                         p: 1,
                                         borderRadius: "6px",
                                         display: "flex",
@@ -256,17 +274,17 @@ const Footer = () => {
                                         textDecoration: "none",
                                         transition: "all 0.3s ease",
                                         "&:hover": {
-                                            bgcolor: "#1976d2",
-                                            transform: "scale(1.1)"
-                                        }
+                                            transform: "scale(1.1)",
+
+                                        },
                                     }}
                                 >
                                     {item.icon}
                                 </Box>
                             ))}
                         </Box>
-
                     </Grid>
+
                 </Grid>
 
 
