@@ -1,5 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
+import BrowserDownload from "../assets/Browser.png"
+
 
 const browsers = [
     { name: "Chrome", icon: "https://framerusercontent.com/images/Pf1EZTXzWCe0w0tmswGkGtoSw.svg" },
@@ -57,7 +59,7 @@ const WebDownload = ({ handleClick }) => {
 
                         <Box
                             component="img"
-                            src="https://framerusercontent.com/images/VMlyJdWdfaRDDAbGARnULWDMEVc.png?scale-down-to=1024"
+                            src={BrowserDownload}
                             alt="Download Devices"
                             sx={{
                                 maxWidth: "100%",

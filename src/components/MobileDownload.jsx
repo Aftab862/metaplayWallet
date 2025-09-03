@@ -1,5 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
+import MobileImg from '../assets/MobileDownload.png'
+
 
 const MobileDownload = ({ handleClick }) => {
     const mobile = [
@@ -25,20 +27,6 @@ const MobileDownload = ({ handleClick }) => {
 
                     className="flex flex-col-reverse md:flex-row items-center gap-10">
                     {/* Image Section */}
-                    <Box>
-                        <Box
-                            component="img"
-                            src="https://framerusercontent.com/images/ojR9drUQuF1ZfjCgBAEzJnQE.png?scale-down-to=1024"
-                            alt="Download Devices"
-                            sx={{
-                                maxWidth: "100%",
-                                width: { xs: "220px", sm: "260px", md: "320px", lg: "400px" },
-                                objectFit: "contain",
-                            }}
-                        />
-                    </Box>
-
-                    {/* Text + Buttons */}
                     <Stack className="flex-1 items-center">
                         <Typography
                             variant="h2"
@@ -75,6 +63,20 @@ const MobileDownload = ({ handleClick }) => {
                             ))}
                         </Stack>
                     </Stack>
+                    <Box>
+                        <Box
+                            component="img"
+                            src={MobileImg}
+                            alt="Download Devices"
+                            sx={{
+                                maxWidth: "100%",
+                                width: { xs: "220px", sm: "260px", md: "320px", lg: "400px" },
+                                objectFit: "contain",
+                            }}
+                        />
+                    </Box>
+
+                    {/* Text + Buttons */}
                 </Box>
             </Box>
         </Box>
