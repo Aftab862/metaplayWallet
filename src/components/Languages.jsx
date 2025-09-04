@@ -59,27 +59,54 @@ export default function LanguageSelector() {
                         zIndex: 10,
                     }}
                 >
-                    {languages.map((lang) => (
+                    {languages ?
                         <Box
-                            key={lang.name}
                             sx={{
                                 display: "flex",
+                                flexDirection: "column",
                                 alignItems: "center",
+                                justifyContent: "center",
+                                textAlign: "center",
                                 gap: 1.5,
-                                py: 1,
-                                px: 1,
-                                borderRadius: 1,
-                                cursor: "pointer",
-                                "&:hover": {
-                                    bgcolor: "rgba(0,0,0,0.04)",
-                                },
+                                py: 2,
                             }}
-                            onClick={() => setOpen(false)}
                         >
-                            <Avatar src={lang.img} alt={lang.name} sx={{ width: 24, height: 24 }} />
-                            <Typography variant="body2">{lang.name}</Typography>
+                            {/* <Globe size={36} color="#1976d2" /> */}
+                            <Typography
+                                variant="h6"
+                                sx={{ fontWeight: "bold", color: "#333" }}
+                            >
+                                Coming Soon
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                sx={{ color: "text.secondary", maxWidth: 180 }}
+                            >
+                                Language options are on the way! Stay tuned for updates.
+                            </Typography>
                         </Box>
-                    ))}
+                        :
+                        languages.map((lang) => (
+                            <Box
+                                key={lang.name}
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: 1.5,
+                                    py: 1,
+                                    px: 1,
+                                    borderRadius: 1,
+                                    cursor: "pointer",
+                                    "&:hover": {
+                                        bgcolor: "rgba(0,0,0,0.04)",
+                                    },
+                                }}
+                                onClick={() => setOpen(false)}
+                            >
+                                <Avatar src={lang.img} alt={lang.name} sx={{ width: 24, height: 24 }} />
+                                <Typography variant="body2">{lang.name}</Typography>
+                            </Box>
+                        ))}
                 </Paper>
             </Box>
         </ClickAwayListener>
